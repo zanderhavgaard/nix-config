@@ -1,0 +1,12 @@
+---
+version: "3"
+
+tasks:
+
+  switch:
+    cmds:
+      - sudo nixos-rebuild switch --flake .
+
+  build:
+    cmds:
+      - sudo nixos-rebuild build --flake .

@@ -178,6 +178,7 @@
     unzip
     python3
     neo-cowsay
+    go-task
   ];
 
   fonts.packages = with pkgs; [
