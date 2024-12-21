@@ -158,7 +158,7 @@
     bitwarden-cli
     dolphin
     git
-    tldr
+    tealdeer
     fastfetch
     pfetch-rs
     yazi
