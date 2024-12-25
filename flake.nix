@@ -19,6 +19,8 @@
         orion = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            # how to do this?
+            # ./hosts/orion/configuration.nix
             ./configuration.nix
 
             # setup home-manager as a module

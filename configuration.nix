@@ -53,19 +53,19 @@
   services.xserver.enable = false;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
-  # services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = true;
 
   # enable hyprland
   # programs.hyprland.enable = true;
   # Optional, hint electron apps to use wayland:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # programs.river.enable = true;
-  # programs.waybar.enable = true;
+  programs.river.enable = true;
+  programs.waybar.enable = true;
 
   programs.zsh.enable = true;
   programs.fish.enable = true;

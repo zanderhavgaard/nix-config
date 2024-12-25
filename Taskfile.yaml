@@ -7,6 +7,10 @@ tasks:
     cmds:
       - fd '.nix' | xargs nixfmt
 
+  update:
+    cmds:
+      - nix flake update
+
   switch:
     cmds:
       - sudo nixos-rebuild switch --flake .
