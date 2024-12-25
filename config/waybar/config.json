@@ -1,0 +1,103 @@
+{
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["river/tags", "river/layout"],
+  "modules-center": [],
+  "modules-right": [
+    "clock",
+    "pulseaudio",
+    "network",
+    "backlight",
+    "battery#bat0",
+    "battery#bat1",
+    "idle_inhibitor",
+    "custom/kernel",
+    "tray"
+  ],
+  "custom/kernel": {
+    "exec": "/home/zander/dotfiles/scripts/print_osicon_kernel.sh"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰅶",
+      "deactivated": "󰛊"
+    }
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%H:%M 󰥔  %d/%m ~ %B %Y }"
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery#bat0": {
+    "bat": "BAT0",
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "BAT0:{capacity}% {icon}",
+    "format-charging": "BAT0:{capacity}% 󱐋",
+    "format-plugged": "BAT0:{capacity}% ",
+    "format-alt": "BAT0:{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "battery#bat1": {
+    "bat": "BAT1",
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "BAT1:{capacity}% {icon}",
+    "format-charging": "BAT1:{capacity}% 󱐋",
+    "format-plugged": "BAT1:{capacity}% ",
+    "format-alt": "BAT1:{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰈁",
+    "tooltip-format": "{gwaddr} via {ifname} 󰈀 ",
+    "format-linked": "{ifname} (No IP) 󰈂",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": "󰖁 {icon} {format_source}",
+    "format-muted": "󰖁 {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "hands-free",
+      "headset": "headset",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  }
+}
