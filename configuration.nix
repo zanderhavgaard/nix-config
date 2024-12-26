@@ -137,6 +137,9 @@
     pavucontrol
     power-profiles-daemon
     networkmanagerapplet
+    pamixer
+    playerctl
+    brightnessctl
 
     arc-theme
     papirus-icon-theme
@@ -186,6 +189,8 @@
     rustc
     cargo
     grc
+
+    glib
   ];
 
   fonts.packages = with pkgs; [
