@@ -157,7 +157,6 @@
 
     wget
     wezterm
-    kitty
     foot
     zellij
     bitwarden-desktop

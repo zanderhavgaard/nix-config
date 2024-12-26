@@ -8,6 +8,7 @@ in
 {
   imports = [
     ./modules/waybar/waybar.nix
+    ./modules/wezterm.nix
   ];
 
   # Configure the user
