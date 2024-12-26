@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -138,9 +138,9 @@
     power-profiles-daemon
     networkmanagerapplet
 
-    # arc-theme
-    # papirus-icon-theme
-    # capitaine-cursors
+    arc-theme
+    papirus-icon-theme
+    capitaine-cursors
 
     wofi
     hyprlauncher
@@ -182,6 +182,10 @@
     python3
     neo-cowsay
     go-task
+    nodejs_latest
+    rustc
+    cargo
+    grc
   ];
 
   fonts.packages = with pkgs; [
