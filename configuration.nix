@@ -111,7 +111,7 @@
       "optical"
       "storage"
     ];
-    shell = pkgs.fish;
+    # shell = pkgs.fish;
   };
 
   # Install firefox.
