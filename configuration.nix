@@ -190,6 +190,9 @@
     grc
 
     glib
+
+    signal-desktop
+    discord
   ];
 
   fonts.packages = with pkgs; [
