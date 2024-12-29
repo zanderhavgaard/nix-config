@@ -178,6 +178,7 @@
     lua5_1
     luajit
     luarocks
+    stylua
     viu
     chafa
     unzip
