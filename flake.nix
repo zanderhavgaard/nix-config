@@ -19,16 +19,14 @@
         orion = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            # how to do this?
-            # ./hosts/orion/configuration.nix
-            ./configuration.nix
+            ./hosts/orion/configuration.nix
 
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.zander = import ./home.nix;
+              home-manager.users.zander = import ./hosts/orion/home.nix;
             }
           ];
         };

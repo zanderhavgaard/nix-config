@@ -7,9 +7,9 @@ let
 in
 {
   imports = [
-    ./modules/waybar/waybar.nix
-    ./modules/wezterm.nix
-    ./modules/fish.nix
+    ../../modules/waybar/waybar.nix
+    ../../modules/wezterm.nix
+    ../../modules/fish.nix
   ];
 
   # Configure the user
