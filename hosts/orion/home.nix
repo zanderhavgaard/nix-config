@@ -10,6 +10,7 @@ in
     ../../modules/waybar/waybar.nix
     ../../modules/wezterm.nix
     ../../modules/fish.nix
+    ../../modules/river/river.nix
   ];
 
   # Configure the user
