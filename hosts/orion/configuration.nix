@@ -64,6 +64,8 @@
   # Optional, hint electron apps to use wayland:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # desktop portal wlroots-based window mangers, like river
+  xdg.portal.wlr.enable = true;
   programs.river.enable = true;
   programs.waybar.enable = true;
 

@@ -45,25 +45,12 @@
     border-color-unfocused = "0x5c6370";
     border-color-urgent = "0xe06c75";
 
-    # start background processes
-    spawn = [
-      # "waybar" # needed ?
-      "nm-applet"
-      "mako"
-      "/home/zander/dotfiles/scripts/swayidle.sh"
-      "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
-      # set an initial wallpaper
-      "/home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh"
-    ];
-
     # create keybindings
     map = {
       # normal mode
       normal = {
         # cycle wallpaper
         "Super+Control+Shift space" = "spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh";
-        # screenshot
-        "Super+Shift+Control S" = "spawn wayshot --slurp \"\$(slurp)\" --stdout | wl-copy";
 
         # lock the screen with swaylock
         "Super+Shift+Control L" = "spawn \"swaylock --color 000000\"";
@@ -135,7 +122,6 @@
           XF86MonBrightnessUp = "spawn 'brightnessctl set +5%'";
           XF86MonBrightnessDown = "spawn 'brightnessctl set 5%-'";
         };
-
       };
     };
 
@@ -154,16 +140,33 @@
       };
     };
 
+    # start background processes
+    spawn = [
+      "\"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river\""
+      "/home/zander/dotfiles/scripts/swayidle.sh"
+      "/home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh"
+      "waybar"
+      "nm-applet"
+      "mako"
+    ];
   };
 
   # extraConfig is appended to the end of the river config file verbatim
   wayland.windowManager.river.extraConfig = ''
 
+    # riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+    # riverctl spawn /home/zander/dotfiles/scripts/swayidle.sh
+    # riverctl spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh
+    # riverctl spawn waybar
+    # riverctl spawn nm-applet
+    # riverctl spawn mako
+
     # ===== theme =====
 
-    riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark"
-    riverctl spawn "gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark"
-    riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme Capitaine-Cursors"
+    # TODO: figure out how to do this in nix
+    # riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark"
+    # riverctl spawn "gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark"
+    # riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme Capitaine-Cursors"
 
     # ===== start-up commands =====
 
@@ -194,6 +197,8 @@
 
     # ===== keymaps =====
 
+    # take a screenshot with grim, use slurp to select the geometry
+    riverctl map normal Super+Shift+Control S spawn "wayshot --slurp \"\$(slurp)\" --stdout | wl-copy"
 
     # switch keyboard layouts
     riverctl map normal Super+Shift+Control U spawn "riverctl keyboard-layout us"
@@ -229,9 +234,6 @@
     done
 
     # ===== start rivertile =====
-
-    # take a screenshot with grim, use slurp to select the geometry
-    riverctl map normal Super+Shift+Control S spawn "wayshot --slurp \"\$(slurp)\" --stdout | wl-copy"
 
     # start wideriver
     wideriver \
