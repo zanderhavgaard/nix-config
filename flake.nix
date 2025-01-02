@@ -30,6 +30,20 @@
             }
           ];
         };
+        gemini = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/gemini/configuration.nix
+
+            # setup home-manager as a module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zander = import ./hosts/gemini/home.nix;
+            }
+          ];
+        };
       };
     };
 }
