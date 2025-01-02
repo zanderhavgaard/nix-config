@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  config,
+  ...
+}:
 
 {
   imports = [
@@ -120,7 +125,9 @@
   programs.firefox.enable = true;
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   programs.vim.enable = true;
   programs.neovim = {
@@ -128,9 +135,14 @@
     defaultEditor = true;
   };
 
+  # TODO: think we might need this
+  # https://nix.dev/guides/faq#how-to-run-non-nix-executables
+  # programs.nix-ld.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    pkgs-unstable.ghostty
     coreutils
     killall
     busybox

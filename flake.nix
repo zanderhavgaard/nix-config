@@ -4,6 +4,10 @@
   inputs = {
     # setup stable nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+
+    # setup unstable nixpkgs
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # setup home-manager
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -13,7 +17,12 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      ...
+    }:
     {
       nixosConfigurations = {
         orion = nixpkgs.lib.nixosSystem {
@@ -30,8 +39,14 @@
             }
           ];
         };
-        gemini = nixpkgs.lib.nixosSystem {
+        gemini = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
+          specialArgs = {
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
           modules = [
             ./hosts/gemini/configuration.nix
 
