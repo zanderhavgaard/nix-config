@@ -117,6 +117,7 @@
       "video"
       "optical"
       "storage"
+      "docker"
     ];
     # shell = pkgs.fish;
   };
@@ -134,6 +135,9 @@
     enable = true;
     defaultEditor = true;
   };
+
+  # install and enable docker daemon
+  virtualisation.docker.enable = true;
 
   # TODO: think we might need this
   # https://nix.dev/guides/faq#how-to-run-non-nix-executables
