@@ -210,6 +210,7 @@
     bat
     devbox
     direnv
+    gh
 
     glib
 
