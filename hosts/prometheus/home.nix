@@ -12,6 +12,7 @@ in
     ../../modules/wezterm.nix
     ../../modules/fish.nix
     ../../modules/home-manager/git.nix
+    ../../modules/home-manager/zsh.nix
   ];
 
   # Configure the user
@@ -35,11 +36,4 @@ in
     };
   };
 
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-    enableFishIntegration = true;
-  };
-
-  programs.fzf.enable = true;
 }
