@@ -208,6 +208,9 @@
 
     signal-desktop
     discord
+    slack
+    _1password
+    _1password-cli
 
     lolcat
     nix-output-monitor
