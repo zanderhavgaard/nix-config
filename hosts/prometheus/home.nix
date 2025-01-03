@@ -41,6 +41,6 @@ in
     settings = {
       theme = "one-half-dark";
     };
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
   };
 }
