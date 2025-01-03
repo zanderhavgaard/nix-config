@@ -1,5 +1,18 @@
 { config, pkgs, ... }:
 {
+  # programs.zoxide = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
+  #
+  # programs.fzf = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
+  #
+  # programs.yazi = {
+  #   enableFishIntegration = true;
+  # };
   # home.packages = with pkgs; [
   #   fish
   #   starship
