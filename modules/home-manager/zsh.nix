@@ -48,8 +48,8 @@
     '';
 
     shellAliases = {
-      ls = "exa --icons";
-      l = "exa --icons --git -alh";
+      ls = "eza --icons";
+      l = "eza --icons --git -alh";
       t = "go-task";
       k = "kubectl";
       knr = "kubectl describe nodes |grep '^  Resource' -A3";

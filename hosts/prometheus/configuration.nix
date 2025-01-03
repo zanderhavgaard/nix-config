@@ -205,6 +205,8 @@
     grc
     nitch
     btop
+    eza
+    libnotify
 
     glib
 
