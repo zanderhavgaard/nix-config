@@ -208,6 +208,8 @@
     eza
     libnotify
     bat
+    devbox
+    direnv
 
     glib
 
