@@ -207,6 +207,7 @@
     btop
     eza
     libnotify
+    bat
 
     glib
 
