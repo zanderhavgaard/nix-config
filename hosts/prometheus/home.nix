@@ -11,6 +11,7 @@ in
     # ../../modules/river.nix
     ../../modules/wezterm.nix
     ../../modules/fish.nix
+    ../../modules/home-manager/git.nix
   ];
 
   # Configure the user
@@ -26,4 +27,6 @@ in
   # packages installed for the user
   home.packages = with pkgs; [
   ];
+
+  programs.fzf.enable = true;
 }
