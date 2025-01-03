@@ -28,5 +28,18 @@ in
   home.packages = with pkgs; [
   ];
 
+  programs.tealdeer = {
+    enable = true;
+    settings = {
+      auto_update = true;
+    };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
+
   programs.fzf.enable = true;
 }
