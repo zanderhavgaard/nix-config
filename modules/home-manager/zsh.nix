@@ -160,13 +160,13 @@
         }
 
         # generic plugins
-        {
-          name = "MichaelAquilina/zsh-autoswitch-virtualenv";
-          tags = [
-            "from:github"
-            "as:plugin"
-          ];
-        }
+        # {
+        #   name = "MichaelAquilina/zsh-autoswitch-virtualenv";
+        #   tags = [
+        #     "from:github"
+        #     "as:plugin"
+        #   ];
+        # }
         {
           name = "hlissner/zsh-autopair";
           tags = [
