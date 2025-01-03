@@ -119,7 +119,7 @@
       "storage"
       "docker"
     ];
-    # shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
