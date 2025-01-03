@@ -141,7 +141,7 @@
 
   # TODO: think we might need this
   # https://nix.dev/guides/faq#how-to-run-non-nix-executables
-  # programs.nix-ld.enable = true;
+  programs.nix-ld.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
