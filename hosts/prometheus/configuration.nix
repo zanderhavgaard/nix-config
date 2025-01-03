@@ -213,7 +213,7 @@
     signal-desktop
     discord
     slack
-    _1password
+    _1password-gui
     _1password-cli
 
     lolcat
