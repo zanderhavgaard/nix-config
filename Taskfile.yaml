@@ -2,7 +2,6 @@
 version: "3"
 
 tasks:
-
   format:
     cmds:
       - fd '.nix' | xargs nixfmt
@@ -14,6 +13,10 @@ tasks:
   switch:
     cmds:
       - sudo nixos-rebuild switch --flake .
+
+  switch-next-boot:
+    cmds:
+      - sudo nixos-rebuild boot --flake .
 
   build:
     cmds:
