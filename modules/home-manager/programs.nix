@@ -4,7 +4,9 @@
     tealdeer = {
       enable = true;
       settings = {
-        auto_update = true;
+        updates = {
+          auto_update = true;
+        };
       };
     };
 
