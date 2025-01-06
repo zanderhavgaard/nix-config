@@ -7,8 +7,12 @@ let
 in
 {
   imports = [
+    # window manager and bar
     ../../modules/home-manager/waybar.nix
     ../../modules/home-manager/river.nix
+    # common programs
+    ../../modules/home-manager/programs.nix
+    # config for specigic programs
     ../../modules/home-manager/fuzzel.nix
     ../../modules/home-manager/wezterm.nix
     ../../modules/home-manager/fish.nix
@@ -29,19 +33,4 @@ in
   # packages installed for the user
   home.packages = with pkgs; [
   ];
-
-  programs.tealdeer = {
-    enable = true;
-    settings = {
-      auto_update = true;
-    };
-  };
-
-  programs.zellij = {
-    enable = true;
-    settings = {
-      theme = "one-half-dark";
-    };
-    # enableZshIntegration = true;
-  };
 }
