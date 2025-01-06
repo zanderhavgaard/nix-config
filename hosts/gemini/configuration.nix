@@ -117,8 +117,9 @@
       "video"
       "optical"
       "storage"
+      "docker"
     ];
-    # shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
@@ -135,9 +136,12 @@
     defaultEditor = true;
   };
 
+  # install and enable docker daemon
+  virtualisation.docker.enable = true;
+
   # TODO: think we might need this
   # https://nix.dev/guides/faq#how-to-run-non-nix-executables
-  # programs.nix-ld.enable = true;
+  programs.nix-ld.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -203,13 +207,21 @@
     rustc
     cargo
     grc
+    nitch
+    btop
+    eza
+    libnotify
+    bat
+    devbox
+    direnv
+    gh
 
     glib
 
     signal-desktop
     discord
     slack
-    _1password
+    _1password-gui
     _1password-cli
 
     lolcat

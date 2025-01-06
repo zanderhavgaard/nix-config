@@ -11,6 +11,8 @@ in
     # ../../modules/river.nix
     ../../modules/wezterm.nix
     ../../modules/fish.nix
+    ../../modules/home-manager/git.nix
+    ../../modules/home-manager/zsh.nix
   ];
 
   # Configure the user
@@ -26,4 +28,19 @@ in
   # packages installed for the user
   home.packages = with pkgs; [
   ];
+
+  programs.tealdeer = {
+    enable = true;
+    settings = {
+      auto_update = true;
+    };
+  };
+
+  programs.zellij = {
+    enable = true;
+    settings = {
+      theme = "one-half-dark";
+    };
+    # enableZshIntegration = true;
+  };
 }
