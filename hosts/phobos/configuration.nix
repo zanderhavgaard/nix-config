@@ -176,6 +176,8 @@
     wget
     wezterm
     foot
+    kitty
+    alacritty
     zellij
     bitwarden-desktop
     bitwarden-cli
