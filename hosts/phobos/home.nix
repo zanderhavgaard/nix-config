@@ -13,6 +13,7 @@ in
     ../../modules/fish.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/zsh.nix
+    ../../modules/home-manager/fuzzel.nix
   ];
 
   # Configure the user
