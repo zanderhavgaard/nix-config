@@ -7,8 +7,8 @@ let
 in
 {
   imports = [
-    # ../../modules/waybar/waybar.nix
-    # ../../modules/river.nix
+    ../../modules/waybar/waybar.nix
+    ../../modules/river.nix
     ../../modules/wezterm.nix
     ../../modules/fish.nix
     ../../modules/home-manager/git.nix
