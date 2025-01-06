@@ -29,7 +29,6 @@
     enable = true;
 
     initExtra = ''
-      # use 
       autoload -U edit-command-line
 
       # use pspg
@@ -51,6 +50,8 @@
               date +%s | sha256sum | base64 | head -c 50 ; echo ; sleep 1
           done
       }
+
+      nitch
     '';
 
     shellAliases = {
@@ -160,13 +161,7 @@
         }
 
         # generic plugins
-        # {
-        #   name = "MichaelAquilina/zsh-autoswitch-virtualenv";
-        #   tags = [
-        #     "from:github"
-        #     "as:plugin"
-        #   ];
-        # }
+
         {
           name = "hlissner/zsh-autopair";
           tags = [
