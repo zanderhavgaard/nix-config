@@ -164,7 +164,6 @@
     capitaine-cursors
 
     wofi
-    hyprlauncher
     wideriver
     mako
     swayidle
@@ -172,6 +171,7 @@
     swaylock
     wayshot
     slurp
+    fuzzel
 
     wget
     wezterm

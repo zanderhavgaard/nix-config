@@ -74,7 +74,7 @@
           W = "spawn firefox";
 
           # application launcher
-          D = "spawn hyprlauncher";
+          D = "spawn fuzzel";
 
           # Super+J and Super+K to focus the next/previous view in the layout stack
           J = "focus-view next";
