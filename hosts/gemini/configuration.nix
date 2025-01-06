@@ -216,6 +216,7 @@
     devenv
     direnv
     gh
+    hub
 
     glib
 
