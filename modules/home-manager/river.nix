@@ -49,21 +49,6 @@
     map = {
       # normal mode
       normal = {
-        # cycle wallpaper
-        "Super+Control+Shift space" = "spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh";
-
-        # lock the screen with swaylock
-        "Super+Shift+Control L" = "spawn \"swaylock --color 000000\"";
-
-        # Super+Q to close the focused window
-        "Super+Shift Q" = "close";
-
-        # Super+Shift+E to exit river
-        "Super+Shift+Control+Alt Q" = "exit";
-
-        # Super+Shift+{Period,Comma} to send the focused view to the next/previous output
-        "Super+Shift Period" = "send-to-output -current-tags next";
-        "Super+Shift Comma" = "send-to-output -current-tags previous";
 
         # super + '...'
         Super = {
@@ -104,7 +89,27 @@
           minus = "send-layout-cmd wideriver \"--ratio -0.025\"";
         };
 
-        # keys without modifiers
+        "Super+Shift" = {
+          # Super+Q to close the focused window
+          Q = "close";
+          # move window up and down in the stack
+          J = "swap next";
+          K = "swap previous";
+          # Super+Shift+{Period,Comma} to send the focused view to the next/previous output
+          Period = "send-to-output -current-tags next";
+          Comma = "send-to-output -current-tags previous";
+        };
+
+        # cycle wallpaper
+        "Super+Control+Shift space" = "spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh";
+
+        # lock the screen with swaylock
+        "Super+Shift+Control L" = "spawn \"swaylock --color 000000\"";
+
+        # Super+Shift+E to exit river
+        "Super+Shift+Control+Alt Q" = "exit";
+
+        # keybinds without modifiers
         None = {
           # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
           XF86AudioRaiseVolume = "spawn 'pamixer -i 5'";
@@ -125,6 +130,7 @@
       };
     };
 
+    # mouse bindings
     map-pointer = {
       normal = {
         super = {
