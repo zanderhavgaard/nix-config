@@ -213,6 +213,7 @@
     libnotify
     bat
     devbox
+    devenv
     direnv
     gh
 
