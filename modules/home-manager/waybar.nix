@@ -4,7 +4,7 @@
   programs.waybar = {
     enable = true;
     # load the styling from it's own file
-    style = builtins.readFile ./style.css;
+    style = builtins.readFile ./waybar/style.css;
     settings = {
       mainBar = {
         layer = "top";

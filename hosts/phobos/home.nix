@@ -7,13 +7,13 @@ let
 in
 {
   imports = [
-    ../../modules/waybar/waybar.nix
-    ../../modules/river.nix
-    ../../modules/wezterm.nix
-    ../../modules/fish.nix
-    ../../modules/home-manager/git.nix
-    ../../modules/home-manager/zsh.nix
+    ../../modules/home-manager/waybar.nix
+    ../../modules/home-manager/river.nix
     ../../modules/home-manager/fuzzel.nix
+    ../../modules/home-manager/wezterm.nix
+    ../../modules/home-manager/fish.nix
+    ../../modules/home-manager/zsh.nix
+    ../../modules/home-manager/git.nix
   ];
 
   # Configure the user
