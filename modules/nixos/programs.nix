@@ -118,6 +118,7 @@
     devenv
     gh
     hub
+    wlr-randr
 
     glib
 
