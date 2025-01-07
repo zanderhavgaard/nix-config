@@ -133,7 +133,7 @@
     # mouse bindings
     map-pointer = {
       normal = {
-        super = {
+        Super = {
           # Super + Left Mouse Button to move views
           BTN_LEFT = "move-view";
 
