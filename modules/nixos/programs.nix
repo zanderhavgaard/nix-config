@@ -94,9 +94,11 @@
     fd
     gcc
     lua5_1
+    lua51Packages.tiktoken_core
     luajit
     luarocks
     stylua
+    lynx
     viu
     chafa
     unzip
