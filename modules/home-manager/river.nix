@@ -25,7 +25,7 @@
     attach-mode = "top";
 
     # focus should follow the mouse
-    focues-follows-cursor = "normal";
+    focus-follows-cursor = "normal";
 
     # move mouse cursor when focus changes
     set-cursor-warp = "on-output-change";
