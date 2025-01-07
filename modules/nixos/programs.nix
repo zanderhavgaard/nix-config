@@ -119,6 +119,7 @@
     gh
     hub
     wlr-randr
+    lazydocker
 
     glib
 
