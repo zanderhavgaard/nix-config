@@ -28,8 +28,6 @@
       enableSSHSupport = true;
     };
 
-    nm-applet.enable = true;
-
     vim.enable = true;
     neovim = {
       enable = true;
@@ -61,6 +59,7 @@
     pamixer
     playerctl
     brightnessctl
+    networkmanagerapplet
 
     arc-theme
     papirus-icon-theme
