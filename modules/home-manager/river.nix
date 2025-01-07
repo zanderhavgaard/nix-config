@@ -151,7 +151,6 @@
       "\"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river\""
       "/home/zander/dotfiles/scripts/swayidle.sh"
       "/home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh"
-      "waybar"
       "nm-applet"
       "mako"
     ];
