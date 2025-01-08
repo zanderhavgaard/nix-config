@@ -121,6 +121,11 @@
     hub
     wlr-randr
     lazydocker
+    kubectl
+    kubernetes-helm
+    k9s
+    kubectx
+    # kubeswitch
 
     glib
 
