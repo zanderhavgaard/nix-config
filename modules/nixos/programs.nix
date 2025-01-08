@@ -92,6 +92,7 @@
     fzf
     ripgrep
     fd
+    sad
     gcc
     lua5_1
     lua51Packages.tiktoken_core
