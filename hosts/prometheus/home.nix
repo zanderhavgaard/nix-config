@@ -20,6 +20,22 @@ in
     ../../modules/home-manager/git.nix
   ];
 
+  gtk = {
+    cursorTheme = {
+      name = "Capitaine-Cursors";
+      package = pkgs.capitaine-cursors;
+      # size = ?
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    theme = {
+      name = "Arc-Dark";
+      package = pkgs.arc-theme;
+    };
+  };
+
   # Configure the user
   home.username = username;
   home.homeDirectory = homePath;

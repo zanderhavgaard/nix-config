@@ -67,9 +67,9 @@ in
     brightnessctl
     networkmanagerapplet
 
-    arc-theme
-    papirus-icon-theme
-    capitaine-cursors
+    # arc-theme
+    # papirus-icon-theme
+    # capitaine-cursors
 
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
