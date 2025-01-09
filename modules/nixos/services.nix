@@ -27,7 +27,11 @@
     # ssh server
     openssh.enable = false;
 
+    # power profile daemon
     power-profiles-daemon.enable = true;
+
+    # start keyring
+    gnome.gnome-keyring.enable = true;
   };
 
 }

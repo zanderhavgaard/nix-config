@@ -1,9 +1,14 @@
 { pkgs, ... }:
+
+let
+  username = "zander";
+  fullname = "Zander Hornung Havgaard";
+in
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.zander = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "Zander Hornung Havgaard";
+    description = fullname;
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -16,6 +21,10 @@
     ];
     shell = pkgs.zsh;
   };
+
+  # try to automatically unlock keyring when logging in as user
+  security.pam.services.${username}.enableGnomeKeyring = true;
+  security.polkit.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Copenhagen";

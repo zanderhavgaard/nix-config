@@ -8,6 +8,9 @@
   ...
 }:
 
+let
+  username = "zander";
+in
 {
 
   # TODO: think we might need this
@@ -43,7 +46,10 @@
     direnv.enable = true;
     htop.enable = true;
     _1password.enable = true; # cli
-    _1password-gui.enable = true;
+    _1password-gui = {
+      enable = true;
+      polkitPolicyOwners = [ username ];
+    };
   };
 
   # TODO: organize this list ...
