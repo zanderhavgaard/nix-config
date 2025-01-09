@@ -15,6 +15,19 @@
     # You can disable this if you're only using the Wayland session.
     xserver.enable = false;
 
+    displayManager = {
+      enable = true;
+
+      sddm = {
+        enable = false;
+        wayland.enable = true;
+      };
+
+      ly = {
+        enable = true;
+      };
+    };
+
     # enable firmware udpate daemon
     fwupd.enable = true;
 

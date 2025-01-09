@@ -71,6 +71,8 @@ in
     papirus-icon-theme
     capitaine-cursors
 
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
     wideriver
     mako
     swayidle
