@@ -14,6 +14,11 @@ tasks:
     cmds:
       - sudo nixos-rebuild switch --flake .
 
+  update-switch:
+    cmds:
+      - task: update
+      - task: switch
+
   switch-next-boot:
     cmds:
       - sudo nixos-rebuild boot --flake .
