@@ -5,6 +5,11 @@
     enable = true;
     # load the styling from it's own file
     style = builtins.readFile ./waybar/style.css;
+
+    systemd = {
+      enable = true;
+    };
+
     settings = {
       mainBar = {
         layer = "top";
