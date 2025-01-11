@@ -18,6 +18,7 @@ in
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
+    ../../modules/home-manager/gtk.nix
   ];
 
   # Configure the user

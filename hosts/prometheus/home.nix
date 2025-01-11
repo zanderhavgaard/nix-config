@@ -18,23 +18,8 @@ in
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
+    ../../modules/home-manager/gtk.nix
   ];
-
-  gtk = {
-    cursorTheme = {
-      name = "Capitaine-Cursors";
-      package = pkgs.capitaine-cursors;
-      # size = ?
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    theme = {
-      name = "Arc-Dark";
-      package = pkgs.arc-theme;
-    };
-  };
 
   # Configure the user
   home.username = username;
