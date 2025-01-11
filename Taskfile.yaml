@@ -10,6 +10,10 @@ tasks:
     cmds:
       - nix flake update
 
+  nh:
+    cmds:
+      - nh os switch .
+
   switch:
     cmds:
       - sudo nixos-rebuild switch --flake .

@@ -50,6 +50,12 @@ in
       enable = true;
       polkitPolicyOwners = [ username ];
     };
+    nh = {
+      enable = true;
+      clean = {
+        enable = true;
+      };
+    };
   };
 
   # TODO: organize this list ...
