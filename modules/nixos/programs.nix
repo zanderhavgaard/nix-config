@@ -58,50 +58,57 @@ in
     };
   };
 
-  # TODO: organize this list ...
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-    pkgs-unstable.ghostty
+    # system stuff
     coreutils
     killall
     busybox
+    lemonade
+    glib
+    libnotify
 
-    pavucontrol
-    pamixer
-    playerctl
-    brightnessctl
-    networkmanagerapplet
-
-    xdg-desktop-portal-wlr
-    xdg-desktop-portal-gtk
-    wideriver
-    mako
-    swayidle
-    swaybg
-    swaylock
-    wayshot
-    slurp
-    fuzzel
-
-    wget
+    # graphical applications
+    pkgs-unstable.ghostty
     wezterm
     kitty
     alacritty
-    zellij
     bitwarden-desktop
     bitwarden-cli
-    dolphin
+    xfce.thunar
+    signal-desktop
+    discord
+    slack
+
+    # cli programs
+    wget
     tealdeer
+    zellij
     fastfetch
     pfetch-rs
     yazi
-    wl-clipboard
-    lemonade
     nixfmt-rfc-style
     fzf
     ripgrep
     fd
     sad
+    lolcat
+    htop
+    unzip
+    neo-cowsay
+    go-task
+    grc
+    nitch
+    btop
+    bottom
+    eza
+    bat
+    devbox
+    devenv
+    gh
+    hub
+
+    # neovim dependencies
     gcc
     lua5_1
     lua51Packages.tiktoken_core
@@ -111,39 +118,17 @@ in
     lynx
     viu
     chafa
-    unzip
     python3
-    neo-cowsay
-    go-task
     nodejs_latest
     rustc
     cargo
-    grc
-    nitch
-    btop
-    bottom
-    eza
-    libnotify
-    bat
-    devbox
-    devenv
-    gh
-    hub
-    wlr-randr
+
+    # container/k8s stuff
     lazydocker
     kubectl
     kubernetes-helm
     k9s
     kubectx
     # kubeswitch
-
-    glib
-
-    signal-desktop
-    discord
-    slack
-
-    lolcat
-    htop
   ];
 }
