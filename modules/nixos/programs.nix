@@ -144,7 +144,6 @@ in
     slack
 
     lolcat
-    nix-output-monitor
     htop
   ];
 }
