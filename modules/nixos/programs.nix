@@ -66,16 +66,11 @@ in
     killall
     busybox
 
-    lxappearance
     pavucontrol
     pamixer
     playerctl
     brightnessctl
     networkmanagerapplet
-
-    # arc-theme
-    # papirus-icon-theme
-    # capitaine-cursors
 
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
@@ -126,6 +121,7 @@ in
     grc
     nitch
     btop
+    bottom
     eza
     libnotify
     bat
