@@ -8,6 +8,7 @@
 
     systemd = {
       enable = true;
+      target = "river-session.target";
     };
 
     settings = {
