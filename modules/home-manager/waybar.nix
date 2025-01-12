@@ -8,7 +8,6 @@
 
     systemd = {
       enable = true;
-      target = "sway-session.target";
     };
 
     settings = {
