@@ -14,6 +14,9 @@
       # make home-manager use the same nixpkgs as the flake
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # community hardware configurations
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -21,6 +24,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      nixos-hardware,
       ...
     }:
     {
@@ -35,6 +39,7 @@
           };
           modules = [
             ./hosts/orion/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t490
 
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
