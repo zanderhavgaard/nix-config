@@ -47,7 +47,7 @@
         };
 
         "custom/kernel" = {
-          exec = "/home/zander/dotfiles/scripts/print_osicon_kernel.sh";
+          exec = "echo \"󱄅 \$(uname -r)\"";
         };
 
         "idle_inhibitor" = {
