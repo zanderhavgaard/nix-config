@@ -119,7 +119,7 @@ in
     viu
     chafa
     python3
-    nodejs_latest
+    nodejs_22
     rustc
     cargo
 
