@@ -19,6 +19,7 @@ in
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/gtk.nix
+    ../../modules/home-manager/k9s.nix
   ];
 
   # Configure the user
