@@ -26,12 +26,40 @@
 
   programs.fish = {
     enable = true;
+    generateCompletions = true;
 
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
 
       nitch
     '';
+
+    shellAbbrs = {
+      g = "git";
+      ls = "eza --icons";
+      l = "eza --icons --git -alh";
+      t = "go-task";
+      k = "kubectl";
+      knr = "kubectl describe nodes |grep '^  Resource' -A3";
+      n = "nvim";
+      gs = "git status";
+      lg = "lazygit";
+      ncdu = "ncdu --color dark -rr";
+      ping = "prettyping --nolegend";
+      cat = "bat";
+      # docker
+      docker_status = "echo -e \"\nContainers:\n\" && docker ps -a && echo -e \"\nImages:\n\" && docker image ls && echo -e \"\nVolumes:\n\" && docker volume ls";
+      docker_clean = "docker volume prune -f && docker system prune -f";
+      # python dev
+      rl = "run_linters";
+      pt = "pytest";
+      rlt = "figlet 'run_linters' ; run_linters ; figlet 'pytest' ; pytest";
+      ruff_fix = "ruff check . --config linting/.ruff.toml --fix";
+      b = "black .";
+      # github cli
+      ghre = "gh repo view --web";
+      ghpr = "gh pr view --web";
+    };
 
     plugins = [
       {
