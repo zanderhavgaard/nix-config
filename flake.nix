@@ -60,6 +60,7 @@
           };
           modules = [
             ./hosts/gemini/configuration.nix
+            nixos-hardware.nixos-modules.lenovo-thinkpad-t14-amd-gen5
 
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
