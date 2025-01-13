@@ -57,7 +57,7 @@
     shellAliases = {
       ls = "eza --icons";
       l = "eza --icons --git -alh";
-      t = "go-task";
+      t = "task";
       k = "kubectl";
       knr = "kubectl describe nodes |grep '^  Resource' -A3";
       n = "nvim";
