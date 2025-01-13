@@ -80,6 +80,8 @@
           };
           modules = [
             ./hosts/prometheus/configuration.nix
+            nixos-hardware.nixosModules.common-cpu-amd
+            nixos-hardware.nixosModules.common-gpu-amd
 
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
