@@ -7,11 +7,19 @@
     userEmail = "zander@havgaard.dk";
 
     signing = {
-      signByDefault = true;
+      # enabling this will sign both commits and tags,
+      # which will have the side effect of creating 'annotated' tags
+      # by default, which can be problematic for references on github
+      # instead I explicitly enable commit signing below
+      signByDefault = false;
       key = "9FB78AB62EDDC533";
     };
 
     extraConfig = {
+      commit = {
+        gpgSign = true;
+      };
+
       pull = {
         rebase = true;
       };
