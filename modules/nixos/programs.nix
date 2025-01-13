@@ -110,6 +110,7 @@ in
     devenv
     gh
     hub
+    comma
 
     # neovim dependencies
     gcc
