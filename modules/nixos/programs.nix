@@ -40,6 +40,8 @@ in
     git.enable = true;
 
     firefox.enable = true;
+    chromium.enable = true;
+
     foot.enable = true;
     yazi.enable = true;
     lazygit.enable = true;
