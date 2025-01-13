@@ -42,6 +42,7 @@ in
     firefox.enable = true;
     chromium.enable = true;
 
+    thunderbird.enable = true;
     foot.enable = true;
     yazi.enable = true;
     lazygit.enable = true;
