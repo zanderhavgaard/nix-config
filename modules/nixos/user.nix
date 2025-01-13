@@ -19,7 +19,20 @@ in
       "storage"
       "docker"
     ];
-    shell = pkgs.zsh;
+    # set default shell to bash, which launches fish
+    # see: https://nixos.wiki/wiki/Fish
+    shell = pkgs.bash;
+  };
+
+  # use bash to start fish shell when logging in interactively
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
   };
 
   # try to automatically unlock keyring when logging in as user
