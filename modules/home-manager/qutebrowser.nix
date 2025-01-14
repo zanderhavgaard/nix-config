@@ -9,6 +9,10 @@
     enable = true;
 
     settings = {
+      tabs = {
+        position = "left";
+      };
+
       colors = {
         webpage = {
           darkmode = {
