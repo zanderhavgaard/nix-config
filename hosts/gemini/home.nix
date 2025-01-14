@@ -21,6 +21,7 @@ in
     ../../modules/home-manager/gtk.nix
     ../../modules/home-manager/k9s.nix
     ../../modules/home-manager/green.nix
+    ../../modules/home-manager/qutebrowser.nix
   ];
 
   # Configure the user

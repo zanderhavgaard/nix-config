@@ -82,6 +82,7 @@ in
     signal-desktop
     discord
     slack
+    qutebrowser
     mpv
 
     # cli programs
