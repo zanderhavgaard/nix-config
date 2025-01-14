@@ -24,6 +24,7 @@
     ../../modules/nixos/audio.nix
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/river.nix
+    ../../modules/nixos/bottles.nix
     ../../modules/nixos/green.nix
   ];
 
