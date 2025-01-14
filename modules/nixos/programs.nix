@@ -112,6 +112,7 @@ in
     gh
     hub
     comma
+    ncdu
 
     # neovim dependencies
     gcc
