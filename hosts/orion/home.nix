@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 let
   username = "zander";
   homePath = "/home/${username}";
-  configPath = "${homePath}/nix-config/config";
 in
 {
   imports = [
@@ -34,6 +33,6 @@ in
   programs.home-manager.enable = true;
 
   # packages installed for the user
-  home.packages = with pkgs; [
-  ];
+  # home.packages = with pkgs; [
+  # ];
 }
