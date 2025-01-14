@@ -20,6 +20,7 @@ in
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/gtk.nix
     ../../modules/home-manager/k9s.nix
+    ../../modules/home-manager/qutebrowser.nix
   ];
 
   # Configure the user
