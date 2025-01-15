@@ -110,6 +110,8 @@ in
     hub
     comma
     ncdu
+    jq
+    yq-go
 
     # neovim dependencies
     gcc
