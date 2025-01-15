@@ -17,6 +17,9 @@
 
     # community hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    # build neovim from git
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs =
@@ -25,6 +28,7 @@
       nixpkgs-unstable,
       home-manager,
       nixos-hardware,
+      neovim-nightly-overlay,
       ...
     }:
     {
@@ -74,6 +78,7 @@
         gemini = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
+            inherit inputs;
             pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
