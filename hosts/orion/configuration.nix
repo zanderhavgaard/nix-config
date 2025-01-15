@@ -25,6 +25,7 @@
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/river.nix
     ../../modules/nixos/neovim.nix
+    ../../modules/nixos/bottles.nix
   ];
 
   # This value determines the NixOS release from which the default

@@ -24,8 +24,9 @@
     ../../modules/nixos/audio.nix
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/river.nix
-    ../../modules/nixos/green.nix
     ../../modules/nixos/neovim.nix
+    ../../modules/nixos/bottles.nix
+    ../../modules/nixos/green.nix
   ];
 
   # This value determines the NixOS release from which the default
