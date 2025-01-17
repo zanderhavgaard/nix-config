@@ -39,6 +39,15 @@
 
     delta = {
       enable = true;
+      options = {
+        side-by-side = true;
+        navigate = true;
+        light = false;
+        line-numbers = true;
+        syntax-theme = "OneHalfDark";
+        zero-style = "syntax dim";
+        minus-style = "syntax bold auto";
+      };
     };
 
     aliases = {
