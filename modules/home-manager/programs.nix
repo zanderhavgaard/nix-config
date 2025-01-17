@@ -17,4 +17,11 @@
       };
     };
   };
+
+  programs.bat = {
+    config = {
+      pager = "less -FR";
+      theme = "OneHalfDark";
+    };
+  };
 }
