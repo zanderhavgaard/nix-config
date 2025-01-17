@@ -164,20 +164,6 @@
     # extraConfig is appended to the end of the river config file verbatim
     extraConfig = ''
 
-      # riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
-      # riverctl spawn /home/zander/dotfiles/scripts/swayidle.sh
-      # riverctl spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh
-      # riverctl spawn waybar
-      # riverctl spawn nm-applet
-      # riverctl spawn mako
-
-      # ===== theme =====
-
-      # TODO: figure out how to do this in nix
-      # riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark"
-      # riverctl spawn "gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark"
-      # riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme Capitaine-Cursors"
-
       # ===== start-up commands =====
 
       # start different programs depending on which system
@@ -193,6 +179,7 @@
 
       elif [ "$(hostname)" = 'phobos' ]; then
         bash /home/zander/dotfiles/wlr-randr/phobos.sh
+        riverctl spawn nextcloud
 
       fi
 
