@@ -113,21 +113,6 @@ in
     jq
     yq-go
 
-    # neovim dependencies
-    gcc
-    lua5_1
-    lua51Packages.tiktoken_core
-    luajit
-    luarocks
-    stylua
-    lynx
-    viu
-    chafa
-    python3
-    nodejs_22
-    rustc
-    cargo
-
     # container/k8s stuff
     lazydocker
     kubectl
