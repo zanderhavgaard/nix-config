@@ -154,10 +154,9 @@
       # start background processes
       spawn = [
         "\"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river\""
-        "/home/zander/dotfiles/scripts/swayidle.sh"
-        "/home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh"
-        "nm-applet"
-        "mako"
+        "\"swayidle -w timeout 600 'swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'\"" # lock screen
+        "nm-applet" # network manager applet
+        "mako" # notification daemon
       ];
     };
 
