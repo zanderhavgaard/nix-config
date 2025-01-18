@@ -122,6 +122,28 @@
             }
           ];
         };
+        venera = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+          modules = [
+            ./hosts/venera/configuration.nix
+            nixos-hardware.nixosModules.dell-xps-15-9520-nvidia
+
+            # setup home-manager as a module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zander = import ./hosts/venera/home.nix;
+            }
+          ];
+        };
       };
     };
 }
