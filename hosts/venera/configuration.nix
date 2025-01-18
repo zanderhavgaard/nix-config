@@ -26,6 +26,7 @@
     ../../modules/nixos/river.nix
     ../../modules/nixos/neovim.nix
     ../../modules/nixos/bottles.nix
+    ../../modules/nixos/steam.nix
   ];
 
   # This value determines the NixOS release from which the default
