@@ -1,6 +1,15 @@
 { pkgs, config, ... }:
-{
 
+let
+  wallpaper_path = "/home/zander/wallpapers";
+  wallpaper_script_name = "wallpaper.sh";
+  # create executable shell (bash?) script in nix store, the path is returned
+  wallpaper_script_path = pkgs.writeScriptBin "${wallpaper_script_name}" ''
+    wallpaper=$(ls ${wallpaper_path} | shuf -n 1)
+    swww img --transition-type random "${wallpaper_path}/$wallpaper"
+  '';
+in
+{
   wayland.windowManager.river = {
     enable = true;
 
@@ -105,8 +114,9 @@
             Comma = "send-to-output -current-tags previous";
           };
 
-          # cycle wallpaper
-          "Super+Control+Shift space" = "spawn /home/zander/dotfiles/scripts/swaybg-set-random-wallpaper.sh";
+          # cycle wallpaper with swww
+          # "Super+Control+Shift space" = "spawn \"swww img $(ls ${wallpaper_path} | shuf -n 1)\"";
+          "Super+Control+Shift space" = "spawn \"${wallpaper_script_path}/bin/${wallpaper_script_name}\"";
 
           # lock the screen with swaylock
           "Super+Shift+Control L" = "spawn \"swaylock --color 000000\"";
@@ -157,6 +167,7 @@
         "\"swayidle -w timeout 600 'swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'\"" # lock screen
         "nm-applet" # network manager applet
         "mako" # notification daemon
+        "\"swww-daemon --format xrgb\"" # walpaper daemon
       ];
     };
 

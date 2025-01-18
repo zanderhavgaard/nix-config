@@ -37,6 +37,7 @@
     mako
     swayidle
     swaybg
+    swww
     swaylock
     wayshot
     slurp
