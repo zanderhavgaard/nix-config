@@ -13,7 +13,7 @@
   services = {
     # Enable the X11 windowing system.
     # You can disable this if you're only using the Wayland session.
-    xserver.enable = false;
+    # xserver.enable = false;
 
     # enable firmware udpate daemon
     fwupd.enable = true;
@@ -28,7 +28,8 @@
     openssh.enable = false;
 
     # power profile daemon
-    power-profiles-daemon.enable = true;
+    # TODO: configure
+    power-profiles-daemon.enable = false;
 
     # start keyring
     gnome.gnome-keyring.enable = true;
