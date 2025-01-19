@@ -133,6 +133,7 @@
           };
           modules = [
             ./hosts/venera/configuration.nix
+            nixos-hardware.nixosModules.dell-xps-15-9520
             nixos-hardware.nixosModules.dell-xps-15-9520-nvidia
 
             # setup home-manager as a module
