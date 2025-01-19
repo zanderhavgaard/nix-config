@@ -66,6 +66,7 @@ in
     lemonade
     glib
     libnotify
+    pciutils
 
     # graphical applications
     pkgs-unstable.ghostty
@@ -112,6 +113,14 @@ in
     ncdu
     jq
     yq-go
+
+    wl-clipboard
+    libnotify
+    wlr-randr
+    pavucontrol
+    pamixer
+    playerctl
+    brightnessctl
 
     # container/k8s stuff
     lazydocker
