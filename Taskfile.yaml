@@ -21,7 +21,7 @@ tasks:
   update-switch:
     cmds:
       - task: update
-      - task: switch
+      - task: nh
 
   switch-next-boot:
     cmds:
