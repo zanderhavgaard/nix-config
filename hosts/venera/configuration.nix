@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
+  lib,
   ...
 }:
 
@@ -31,40 +32,9 @@
     ../../modules/nixos/steam.nix
   ];
 
-  # boot.kernelParams = [
-  #   "nvidia-drm.fbdev=1"
-  # ];
-
-  # hardware = {
-  #   graphics = {
-  #     enable = true;
-  #   };
-  #
-  #   nvidia = {
-  #     open = true; # Set to false for proprietary drivers
-  #     modesetting.enable = true;
-  #
-  #     prime = {
-  #       # sync = {
-  #       #   enable = false;
-  #       # };
-  #
-  #       offload = {
-  #         enable = true;
-  #         enableOffloadCmd = true;
-  #       };
-  #
-  #       # integrated
-  #       intelBusId = "PCI:0:2:0";
-  #       # dedicated
-  #       nvidiaBusId = "PCI:1:0:0";
-  #     };
-  #   };
-  # };
-
+  # create bootable configruration with only dedicated nvidia graphics enabled
   # specialisation = {
   #   gaming-time.configuration = {
-  #
   #     hardware.nvidia = {
   #       prime.sync.enable = lib.mkForce true;
   #       prime.offload = {
@@ -72,22 +42,8 @@
   #         enableOffloadCmd = lib.mkForce false;
   #       };
   #     };
-  #
   #   };
   # };
-
-  # These should be set through nixos hardware flake
-  # even though it says xserver, should enable for both x and wayland
-  # services = {
-  #   xserver = {
-  #     videoDrivers = [ "nvidia" ];
-  #   };
-  # };
-  # services.xserver.videoDrivers = [“amdgpu”];
-
-  #
-  # --------------------------------------------------
-  #
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

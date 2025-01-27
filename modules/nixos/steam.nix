@@ -3,8 +3,6 @@
 # https://journix.dev/posts/gaming-on-nixos/
 # https://github.com/fufexan/nix-gaming
 #
-# NOTE: this file is currently very specific to venera
-#
 { pkgs, ... }:
 {
 
