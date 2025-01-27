@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
+  pkgs,
   lib,
   ...
 }:
@@ -31,6 +32,9 @@
     ../../modules/nixos/bottles.nix
     ../../modules/nixos/steam.nix
   ];
+
+  # overrride default to use latest kernel, and use standard/lts
+  boot.kernelPackages = lib.mkForce pkgs.linuxPackages;
 
   # create bootable configruration with only dedicated nvidia graphics enabled
   # specialisation = {
