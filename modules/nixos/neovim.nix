@@ -12,7 +12,7 @@
       package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
       # enable providers for plugins in other languages than lua
-      withPython3 = false;
+      withPython3 = true;
       withNodeJs = true;
     };
   };
@@ -29,6 +29,7 @@
     viu
     chafa
     nodejs_22
+    python3
     rustc
     cargo
     lazygit
