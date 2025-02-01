@@ -81,6 +81,7 @@
       # github cli
       ghre = "gh repo view --web";
       ghpr = "gh pr view --web";
+      firmware_update = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
     };
 
     plugins = [
