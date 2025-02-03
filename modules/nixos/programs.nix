@@ -107,6 +107,7 @@ in
     bat
     devbox
     devenv
+    nix-output-monitor
     gh
     hub
     comma
