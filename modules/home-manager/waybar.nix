@@ -121,7 +121,7 @@
         };
 
         network = {
-          format-wifi = "{essid} ({signalStrength}%) ";
+          format-wifi = "{essid} {ipaddr}/{cidr} ({signalStrength}%) ";
           format-ethernet = "{ipaddr}/{cidr} 󰈁";
           tooltip-format = "{gwaddr} via {ifname} 󰈀 ";
           format-linked = "{ifname} (No IP) 󰈂";
