@@ -69,10 +69,12 @@ in
     pciutils
 
     # graphical applications
-    pkgs-unstable.ghostty
+    ## Example how to add package from unstable nixpkgs
+    # pkgs-unstable.ghostty
     wezterm
     kitty
     alacritty
+    ghostty
     bitwarden-desktop
     bitwarden-cli
     xfce.thunar
