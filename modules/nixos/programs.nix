@@ -81,6 +81,8 @@ in
     slack
     qutebrowser
     mpv
+    zathura
+    sioyek
 
     # cli programs
     wget
