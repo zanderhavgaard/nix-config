@@ -16,21 +16,21 @@
         theme = "one-half-dark";
       };
     };
-  };
 
-  programs.bat = {
-    config = {
-      pager = "less -FR";
-      theme = "OneHalfDark";
+    bat = {
+      config = {
+        pager = "less -FR";
+        theme = "OneHalfDark";
+      };
     };
-  };
 
-  programs.btop = {
-    enable = true;
-    settings = {
-      color_theme = "onedark";
-      theme_background = false;
-      update_ms = 100;
+    btop = {
+      enable = true;
+      settings = {
+        color_theme = "onedark";
+        theme_background = false;
+        update_ms = 100;
+      };
     };
   };
 }

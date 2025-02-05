@@ -22,24 +22,6 @@ in
     ../../modules/home-manager/qutebrowser.nix
   ];
 
-  programs.ghostty = {
-    enable = true;
-
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    enableFishIntegration = true;
-
-    settings = {
-      theme = "OneHalfDark";
-      font-family = "Hack Nerd Font";
-      background-opacity = 0.9;
-      window-decoration = "auto";
-      # non-blinking block cursor
-      shell-integration-features = "no-cursor";
-      cursor-style-blink = false;
-    };
-  };
-
   # Configure the user
   home.username = username;
   home.homeDirectory = homePath;
