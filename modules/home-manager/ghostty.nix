@@ -10,6 +10,8 @@
     settings = {
       # TODO: this should be set to 'none', but doesn't seem to work ...
       window-decoration = "none";
+      # should be redundant with the above ...
+      gtk-titlebar = false;
 
       theme = "DoomOne";
       font-family = "Hack Nerd Font";
