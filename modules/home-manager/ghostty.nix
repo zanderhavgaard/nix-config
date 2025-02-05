@@ -9,7 +9,7 @@
 
     settings = {
       # TODO: this should be set to 'none', but doesn't seem to work ...
-      window-decoration = false;
+      window-decoration = "none";
 
       theme = "DoomOne";
       font-family = "Hack Nerd Font";
