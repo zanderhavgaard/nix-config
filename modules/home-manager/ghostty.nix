@@ -11,7 +11,7 @@
       # TODO: this should be set to 'none', but doesn't seem to work ...
       window-decoration = false;
 
-      theme = "OneHalfDark";
+      theme = "DoomOne";
       font-family = "Hack Nerd Font";
       background-opacity = 0.9;
       # non-blinking block cursor
