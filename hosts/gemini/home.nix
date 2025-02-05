@@ -14,6 +14,7 @@ in
     # config for specigic programs
     ../../modules/home-manager/fuzzel.nix
     ../../modules/home-manager/wezterm.nix
+    ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
