@@ -106,6 +106,8 @@ in
     grc
     nitch
     btop
+    iftop
+    tcpdump
     bottom
     eza
     bat
