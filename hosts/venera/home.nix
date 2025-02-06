@@ -21,6 +21,7 @@ in
     ../../modules/home-manager/theme.nix
     ../../modules/home-manager/k9s.nix
     ../../modules/home-manager/qutebrowser.nix
+    ../../modules/home-manager/zathura.nix
   ];
 
   # Configure the user
