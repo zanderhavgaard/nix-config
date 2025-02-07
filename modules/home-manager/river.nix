@@ -67,7 +67,7 @@ in
           # super + '...'
           Super = {
             # spawn terminal
-            Return = "spawn ghostty";
+            Return = "spawn wezterm";
 
             # spawn firefox
             W = "spawn firefox";
