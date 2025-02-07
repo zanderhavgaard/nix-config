@@ -50,5 +50,6 @@
     playerctl
     brightnessctl
     networkmanagerapplet
+    wdisplays
   ];
 }

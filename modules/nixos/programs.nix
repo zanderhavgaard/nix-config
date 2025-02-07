@@ -128,6 +128,7 @@ in
     pamixer
     playerctl
     brightnessctl
+    wdisplays
 
     # container/k8s stuff
     lazydocker
