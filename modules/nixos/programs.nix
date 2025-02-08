@@ -85,6 +85,7 @@ in
     mpv
     zathura
     sioyek
+    nextcloud-client
 
     # cli programs
     wget

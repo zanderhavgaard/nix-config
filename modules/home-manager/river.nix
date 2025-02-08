@@ -181,15 +181,22 @@ in
         bash /home/zander/dotfiles/wlr-randr/home.sh
         riverctl spawn nextcloud
 
-      elif [ "$(hostname)" = 'prometheus' ]; then
-        bash /home/zander/dotfiles/wlr-randr/home.sh
-
       elif [ "$(hostname)" = 'orion' ]; then
         bash /home/zander/dotfiles/wlr-randr/orion.sh
+        riverctl spawn nextcloud
 
       elif [ "$(hostname)" = 'phobos' ]; then
         bash /home/zander/dotfiles/wlr-randr/phobos.sh
         riverctl spawn nextcloud
+
+      elif [ "$(hostname)" = 'venera' ]; then
+        riverctl spawn nextcloud
+        
+      elif [ "$(hostname)" = 'gemini' ]; then
+        echo ""
+
+      elif [ "$(hostname)" = 'prometheus' ]; then
+        bash /home/zander/dotfiles/wlr-randr/home.sh
 
       fi
 
