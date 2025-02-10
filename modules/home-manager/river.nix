@@ -92,7 +92,7 @@ in
 
             # wideriver
             up = "send-layout-cmd wideriver \"--layout monocle\"";
-            down = "send-layout-cmd wideriver \"--layout wide --stack diminish --count 1 --ratio 0.4\"";
+            down = "send-layout-cmd wideriver \"--layout wide --stack diminish --count 1 --ratio 0.5\"";
             left = "send-layout-cmd wideriver \"--layout left\"";
             right = "send-layout-cmd wideriver \"--layout right\"";
 
@@ -254,10 +254,10 @@ in
         --layout left \
         --layout-alt monocle \
         --stack even \
-        --count-master 1 \
+        --count-master 2 \
         --ratio-master 0.50 \
         --count-wide-left 0 \
-        --ratio-wide 0.35 \
+        --ratio-wide 0.5 \
         --smart-gaps \
         --inner-gaps 5 \
         --outer-gaps 5 \
