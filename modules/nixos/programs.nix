@@ -122,6 +122,7 @@ in
     jq
     yq-go
     zip
+    magic-wormhole
 
     wl-clipboard
     libnotify
