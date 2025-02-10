@@ -121,6 +121,7 @@ in
     ncdu
     jq
     yq-go
+    zip
 
     wl-clipboard
     libnotify
