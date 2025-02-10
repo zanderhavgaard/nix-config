@@ -254,7 +254,7 @@ in
         --layout left \
         --layout-alt monocle \
         --stack even \
-        --count-master 2 \
+        --count-master 1 \
         --ratio-master 0.50 \
         --count-wide-left 0 \
         --ratio-wide 0.5 \
