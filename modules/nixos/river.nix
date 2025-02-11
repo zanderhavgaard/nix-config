@@ -2,6 +2,24 @@
 # with waybar as the panel and ly as the display manager
 # configuration is handled in their respective home-manager modules
 { pkgs, ... }:
+let
+  # try to add riverwm-utils pypi package as nix package
+  # TODO: fix, fails when running 'cycle-focused-tags'
+  pythonPackages = pkgs.python3Packages;
+  riverwm-utils =
+    let
+      pname = "riverwm-utils";
+      version = "0.0.10";
+    in
+    pythonPackages.buildPythonPackage {
+      inherit pname version;
+      src = pkgs.fetchPypi {
+        inherit pname version;
+        sha256 = "sha256-Vypeb4ffMtDrljZltm+o3ycg8+OeAvaem6xCYD6QFSo=";
+      };
+      doCheck = false;
+    };
+in
 {
   xdg = {
     portal = {
@@ -51,5 +69,11 @@
     brightnessctl
     networkmanagerapplet
     wdisplays
+    riverwm-utils
+    # needed for riverwm-utils
+    # TODO: needed?
+    pythonPackages.pywayland
+    pythonPackages.pycparser
+    pythonPackages.cffi
   ];
 }
