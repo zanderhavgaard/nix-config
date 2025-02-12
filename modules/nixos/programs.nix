@@ -114,6 +114,14 @@ in
     btop
     iftop
     tcpdump
+    prettyping
+    gping
+    nmap
+    hping
+    traceroute
+    ipcalc
+    dnsutils
+    dnstop
     bottom
     eza
     bat
