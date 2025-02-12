@@ -92,6 +92,7 @@ in
     nextcloud-client
 
     # cli programs
+    helix
     wget
     tealdeer
     zellij
