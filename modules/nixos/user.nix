@@ -61,5 +61,18 @@ in
   services.xserver.xkb = {
     layout = "us";
     variant = "";
+
+    # see: https://nixos.org/manual/nixos/stable/#custom-xkb-layouts
+    extraLayouts = {
+      us-hhkb-esque = {
+        # name = "English (US, HHKB-esque)";
+        description = "US, HHKB-esque";
+        languages = [ "eng" ];
+        symbolsFile = ./symbols/us-hhkb-esque;
+      };
+    };
   };
+
+  # use xkb options in tty
+  console.useXkbConfig = true;
 }

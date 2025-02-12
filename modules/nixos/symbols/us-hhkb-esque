@@ -1,0 +1,10 @@
+xkb_symbols "laptop" 
+{
+    include "us(basic)"
+    name[Group1] = "English (US, hhkb-esque)";
+
+    key <ESC>  { [ grave, asciitilde ] };
+    key <TLDE> { [ Escape ] };
+    key <CAPS> { [ Control_L ] };
+    key <LCTL> { [ Alt_L ] };
+};
