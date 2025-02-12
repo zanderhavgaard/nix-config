@@ -28,7 +28,11 @@ in
 
     gnupg.agent = {
       enable = true;
-      enableSSHSupport = true;
+      enableSSHSupport = false;
+    };
+
+    ssh = {
+      startAgent = true;
     };
 
     vim.enable = true;

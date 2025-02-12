@@ -53,6 +53,10 @@
       	rm -f -- "$tmp"
       end
 
+      # setup ssh-agent and add keys, supress output
+      eval (ssh-agent -c) &> /dev/null
+      ssh-add &> /dev/null
+
       nitch
     '';
 
