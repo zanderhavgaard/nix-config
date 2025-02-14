@@ -32,7 +32,7 @@
     lynx
     viu
     chafa
-    nodejs_22
+    nodejs
     python3
     rustc
     cargo
