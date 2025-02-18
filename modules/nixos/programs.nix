@@ -86,6 +86,7 @@ in
     discord
     slack
     qutebrowser
+    chromium
     mpv
     zathura
     sioyek
