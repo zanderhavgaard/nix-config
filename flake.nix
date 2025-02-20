@@ -149,6 +149,28 @@
             }
           ];
         };
+        vostok = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+          modules = [
+            ./hosts/vostok/configuration.nix
+            # nixos-hardware.nixosModules.lenovo-thinkpad-t470
+
+            # setup home-manager as a module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zander = import ./hosts/vostok/home.nix;
+            }
+          ];
+        };
       };
     };
 }
