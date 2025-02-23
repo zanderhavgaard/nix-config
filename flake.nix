@@ -160,7 +160,11 @@
           };
           modules = [
             ./hosts/vostok/configuration.nix
-            # nixos-hardware.nixosModules.lenovo-thinkpad-t470
+            # There is no Thinkpad T470 module
+            nixos-hardware.nixosModules.common-cpu-intel
+            nixos-hardware.nixosModules.common-gpu-intel
+            nixos-hardware.nixosModules.common-pc-laptop
+            nixos-hardware.nixosModules.common-pc-laptop-ssd
 
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
