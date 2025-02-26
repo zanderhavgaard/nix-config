@@ -30,10 +30,6 @@
       -- setup toggle of top bar
       config.enable_tab_bar = false
 
-      -- Fix for broken rendering on NixOS
-      -- TODO: remove once this is fixed upstream
-      config.front_end = "WebGpu"
-
       -- and finally, return the configuration to wezterm
       return config
     '';
