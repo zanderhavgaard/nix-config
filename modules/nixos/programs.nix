@@ -138,6 +138,7 @@ in
     yq-go
     zip
     magic-wormhole
+    figlet
 
     wl-clipboard
     libnotify
