@@ -139,6 +139,7 @@ in
     zip
     magic-wormhole
     figlet
+    libxml2 # xmllint
 
     wl-clipboard
     libnotify
