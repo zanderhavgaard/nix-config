@@ -41,6 +41,7 @@ in
 
     firefox.enable = true;
     chromium.enable = true;
+    ladybird.enable = true;
 
     gnome-disks.enable = true;
     thunderbird.enable = true;
