@@ -1,19 +1,45 @@
 # this modules has some components for running riverwm
 # with waybar as the panel and ly as the display manager
 # configuration is handled in their respective home-manager modules
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  fetchFromGitHub,
+  ...
+}:
 let
-  # try to add riverwm-utils pypi package as nix package
-  # TODO: fix, fails when running 'cycle-focused-tags'
   pythonPackages = pkgs.python3Packages;
   riverwm-utils = pythonPackages.buildPythonPackage rec {
     pname = "riverwm-utils";
     version = "0.0.10";
-    src = pkgs.fetchPypi {
-      inherit pname version;
-      sha256 = "sha256-Vypeb4ffMtDrljZltm+o3ycg8+OeAvaem6xCYD6QFSo=";
+    pyproject = true;
+
+    src = pkgs.fetchFromGitHub {
+      owner = "NickHastings";
+      repo = "riverwm-utils";
+      rev = version;
+      hash = "sha256-1T6rDhkBDmlpc0RmK2fiFTy2v+Ab40Em9REBCr98180=";
     };
-    doCheck = false;
+
+    build-system = [
+      pythonPackages.setuptools
+    ];
+
+    dependencies = with pythonPackages; [
+      pywayland
+    ];
+
+    pythonImportsCheck = [
+      "riverwm_utils"
+    ];
+
+    meta = {
+      description = "";
+      homepage = "https://github.com/NickHastings/riverwm-utils";
+      license = lib.licenses.gpl3Only;
+      maintainers = with lib.maintainers; [ ];
+      mainProgram = "riverwm-utils";
+    };
   };
 in
 {
