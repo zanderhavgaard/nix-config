@@ -141,6 +141,7 @@ in
     magic-wormhole
     figlet
     libxml2 # xmllint
+    fast-cli
 
     wl-clipboard
     libnotify
