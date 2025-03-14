@@ -10,7 +10,8 @@
     };
 
     font.name = "Hack Nerd Font";
-    themeFile = "OneDark-Pro";
+    # themeFile = "OneDark-Pro";
+    themeFile = "Dracula";
 
     settings = {
       background_opacity = 0.9;
