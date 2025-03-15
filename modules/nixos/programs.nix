@@ -4,7 +4,7 @@
 
 {
   pkgs,
-  pkgs-unstable,
+  pkgs-stable,
   ...
 }:
 
@@ -75,8 +75,8 @@ in
     pciutils
 
     # graphical applications
-    ## Example how to add package from unstable nixpkgs
-    # pkgs-unstable.ghostty
+    ## Example how to add package from stable nixpkgs
+    # pkgs-stable.ghostty
     wezterm
     kitty
     alacritty

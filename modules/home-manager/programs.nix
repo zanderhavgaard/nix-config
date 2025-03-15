@@ -11,7 +11,7 @@
     };
 
     zellij = {
-      enable = true;
+      enable = false;
       settings = {
         theme = "one-half-dark";
       };
