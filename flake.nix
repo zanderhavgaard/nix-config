@@ -142,6 +142,18 @@
             nixos-hardware.nixosModules.dell-xps-15-9520
             nixos-hardware.nixosModules.dell-xps-15-9520-nvidia
 
+            # Binary cache configuration
+            {
+              nix.settings = {
+                substituters = [
+                  "https://nix-community.cachix.org"
+                ];
+                trusted-public-keys = [
+                  "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+                ];
+              };
+            }
+
             # setup home-manager as a module
             home-manager.nixosModules.home-manager
             {
