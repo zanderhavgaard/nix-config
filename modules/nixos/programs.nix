@@ -142,6 +142,7 @@ in
     figlet
     libxml2 # xmllint
     fast-cli
+    gum
 
     wl-clipboard
     libnotify
