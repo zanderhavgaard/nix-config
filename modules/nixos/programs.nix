@@ -143,6 +143,7 @@ in
     libxml2 # xmllint
     fast-cli
     gum
+    yt-dlp
 
     wl-clipboard
     libnotify
