@@ -8,6 +8,9 @@
   virtualisation = {
     # install and enable docker daemon
     docker.enable = true;
+
+    # install waydroid
+    waydroid.enable = true;
   };
 
   services = {
