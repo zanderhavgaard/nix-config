@@ -110,6 +110,7 @@ in
     lolcat
     htop
     unzip
+    unar
     neo-cowsay
     go-task
     grc
