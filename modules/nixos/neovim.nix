@@ -39,12 +39,16 @@
     lazygit
     ripgrep
     fd
+    sqlite
 
     # WIP: not sure that all of these are picked up correctly by neovim
     # lsp/linters/etc.
     bash-language-server
     black
+    # lazyhealth complians about not finding debugpy, let's give it some options ...
     python3Packages.debugpy
+    python312Packages.debugpy
+    python313Packages.debugpy
     docker-compose-language-service
     dockerfile-language-server-nodejs
     hadolint
@@ -71,5 +75,14 @@
     terraform-ls
     tflint
     yaml-language-server
+    rust-analyzer
+    rustup
+    lldb
+    go
+    gofumpt
+    gotools
+    delve
+    gotestsum
+    mermaid-cli
   ];
 }
