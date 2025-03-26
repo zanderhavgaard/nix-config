@@ -28,6 +28,7 @@
     ../../modules/nixos/river.nix
     ../../modules/nixos/neovim.nix
     ../../modules/nixos/bottles.nix
+    ../../modules/nixos/roon-bridge.nix
   ];
 
   # Use neovim from nixpkgs, instead of compiling from source
