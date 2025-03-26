@@ -31,13 +31,7 @@
   ];
 
   # Use neovim from nixpkgs, instead of compiling from source
-  # programs.neovim.package = lib.mkForce pkgs.neovim-unwrapped;
-
-  # roon bridge
-  services.roon-bridge = {
-    enable = true;
-    openFirewall = true;
-  };
+  programs.neovim.package = lib.mkForce pkgs.neovim-unwrapped;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
