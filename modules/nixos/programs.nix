@@ -146,6 +146,8 @@ in
     gum
     yt-dlp
 
+    openvpn
+
     wl-clipboard
     libnotify
     wlr-randr
