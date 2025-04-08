@@ -93,6 +93,7 @@ in
     zathura
     sioyek
     nextcloud-client
+    emacs
 
     # cli programs
     helix
