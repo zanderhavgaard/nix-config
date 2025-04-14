@@ -146,6 +146,7 @@ in
     fast-cli
     gum
     yt-dlp
+    ispell
 
     openvpn
 
