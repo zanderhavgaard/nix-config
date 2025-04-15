@@ -84,7 +84,7 @@ in
     bitwarden-desktop
     bitwarden-cli
     xfce.thunar
-    signal-desktop
+    signal-desktop-bin
     discord
     slack
     qutebrowser
