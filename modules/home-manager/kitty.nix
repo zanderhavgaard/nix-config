@@ -9,9 +9,10 @@
       enableFishIntegration = true;
     };
 
-    font.name = "Hack Nerd Font";
-    # themeFile = "OneDark-Pro";
-    themeFile = "Dracula";
+    font.name = "MartianMono Nerd Font";
+    themeFile = "OneDark-Pro";
+    # themeFile = "Dracula";
+    # themeFile = "Doom_One";
 
     settings = {
       background_opacity = 0.9;
