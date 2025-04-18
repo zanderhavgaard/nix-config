@@ -55,6 +55,7 @@
     helm-ls
     lua-language-server
     nodePackages.vscode-json-languageserver
+    vscode-langservers-extracted
     # markdown-toc # TODO: what is the packge name?
     markdownlint-cli2 # TODO: this is not recognized
     marksman
