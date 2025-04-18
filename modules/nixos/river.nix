@@ -48,13 +48,15 @@ in
       enable = true;
       extraPortals = with pkgs; [
         xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
       ];
+      config.common.default = [ "wlr" ];
     };
   };
 
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "river";
+    XDG_SESSION_DESKTOP = "river";
+    XDG_SESSION_TYPE = "wayland";
   };
 
   # it's convenient to have a display manager as well
@@ -70,9 +72,8 @@ in
 
   # some packages needed for a functional desktop with river
   environment.systemPackages = with pkgs; [
-    wideriver
     xdg-desktop-portal-wlr
-    xdg-desktop-portal-gtk
+    wideriver
     brightnessctl
     mako
     swayidle

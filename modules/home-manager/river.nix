@@ -168,6 +168,9 @@ in
         "nm-applet" # network manager applet
         "mako" # notification daemon
         "\"swww-daemon --format xrgb\"" # walpaper daemon
+        # propagate environment variables to user session
+        "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE"
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE"
       ];
     };
 
