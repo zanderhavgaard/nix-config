@@ -94,6 +94,7 @@ in
     sioyek
     nextcloud-client
     emacs
+    ispell
 
     # cli programs
     helix
@@ -146,7 +147,8 @@ in
     fast-cli
     gum
     yt-dlp
-    ispell
+    termscp
+    termusic
 
     openvpn
 
