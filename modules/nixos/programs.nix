@@ -149,6 +149,9 @@ in
     yt-dlp
     termscp
     termusic
+    ueberzugpp
+    pipe-viewer
+    ytfzf
 
     openvpn
 
