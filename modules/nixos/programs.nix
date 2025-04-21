@@ -110,7 +110,6 @@ in
     fd
     sad
     lolcat
-    htop
     unzip
     unar
     neo-cowsay
