@@ -9,7 +9,10 @@
       enableFishIntegration = true;
     };
 
-    font.name = "MartianMono Nerd Font";
+    font = {
+      name = "MartianMono Nerd Font";
+      size = 10;
+    };
     themeFile = "OneDark-Pro";
     # themeFile = "Dracula";
     # themeFile = "Doom_One";
