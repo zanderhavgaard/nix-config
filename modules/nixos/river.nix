@@ -3,45 +3,8 @@
 # configuration is handled in their respective home-manager modules
 {
   pkgs,
-  lib,
-  fetchFromGitHub,
   ...
 }:
-let
-  pythonPackages = pkgs.python3Packages;
-  riverwm-utils = pythonPackages.buildPythonPackage rec {
-    pname = "riverwm-utils";
-    version = "0.0.10";
-    pyproject = true;
-
-    src = pkgs.fetchFromGitHub {
-      owner = "NickHastings";
-      repo = "riverwm-utils";
-      rev = version;
-      hash = "sha256-1T6rDhkBDmlpc0RmK2fiFTy2v+Ab40Em9REBCr98180=";
-    };
-
-    build-system = [
-      pythonPackages.setuptools
-    ];
-
-    dependencies = with pythonPackages; [
-      pywayland
-    ];
-
-    pythonImportsCheck = [
-      "riverwm_utils"
-    ];
-
-    meta = {
-      description = "";
-      homepage = "https://github.com/NickHastings/riverwm-utils";
-      license = lib.licenses.gpl3Only;
-      maintainers = with lib.maintainers; [ ];
-      mainProgram = "riverwm-utils";
-    };
-  };
-in
 {
   xdg = {
     portal = {
@@ -92,6 +55,6 @@ in
     brightnessctl
     networkmanagerapplet
     wdisplays
-    riverwm-utils
+    # riverwm-utils
   ];
 }
