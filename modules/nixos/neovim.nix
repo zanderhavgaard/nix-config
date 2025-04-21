@@ -85,5 +85,6 @@
     delve
     gotestsum
     mermaid-cli
+    uv
   ];
 }
