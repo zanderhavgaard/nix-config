@@ -47,8 +47,8 @@
     black
     # lazyhealth complians about not finding debugpy, let's give it some options ...
     python3Packages.debugpy
-    python312Packages.debugpy
-    python313Packages.debugpy
+    # python312Packages.debugpy
+    # python313Packages.debugpy
     docker-compose-language-service
     dockerfile-language-server-nodejs
     hadolint

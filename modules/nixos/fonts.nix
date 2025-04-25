@@ -10,13 +10,16 @@
       noto-fonts-extra
     ])
     ++ (with pkgs; [
-      nerd-fonts.hack
-      nerd-fonts.mononoki
-      nerd-fonts.martian-mono
-      nerd-fonts._0xproto
-      nerd-fonts.blex-mono
-      nerd-fonts.ubuntu
-      nerd-fonts.ubuntu-mono
+      # 24.04
+      nerdfonts
+      # 25.05
+      # nerd-fonts.hack-nerd-font
+      # nerd-fonts.mononoki
+      # nerd-fonts.martian-mono
+      # nerd-fonts._0xproto
+      # nerd-fonts.blex-mono
+      # nerd-fonts.ubuntu
+      # nerd-fonts.ubuntu-mono
     ]);
   # install all nerd fonts available
   # ++ (builtins.attrValues (lib.filterAttrs (_: v: lib.isDerivation v) pkgs.nerd-fonts));

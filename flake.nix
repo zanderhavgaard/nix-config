@@ -3,16 +3,16 @@
 
   inputs = {
     # setup stable nixpkgs
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # setup stable nixpkgs
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-24.11";
 
     # setup home-manager
     home-manager = {
-      # url = "github:nix-community/home-manager/release-24.11";
-      url = "github:nix-community/home-manager"; # unstable
+      url = "github:nix-community/home-manager/release-24.11";
+      # url = "github:nix-community/home-manager"; # unstable
       # make home-manager use the same nixpkgs as the flake
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -27,7 +27,7 @@
   outputs =
     inputs@{
       nixpkgs,
-      nixpkgs-stable,
+      nixpkgs-unstable,
       home-manager,
       nixos-hardware,
       neovim-nightly-overlay,
@@ -39,7 +39,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };
@@ -61,7 +61,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };
@@ -83,7 +83,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };
@@ -105,7 +105,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };
@@ -132,7 +132,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };
@@ -167,7 +167,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
+            pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
             };

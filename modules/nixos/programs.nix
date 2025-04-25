@@ -4,7 +4,7 @@
 
 {
   pkgs,
-  pkgs-stable,
+  pkgs-unstable,
   ...
 }:
 
@@ -76,7 +76,7 @@ in
 
     # graphical applications
     ## Example how to add package from stable nixpkgs
-    # pkgs-stable.ghostty
+    # pkgs-unstable.ghostty
     wezterm
     kitty
     alacritty
@@ -84,7 +84,7 @@ in
     bitwarden-desktop
     bitwarden-cli
     xfce.thunar
-    signal-desktop-bin
+    signal-desktop
     discord
     slack
     qutebrowser
