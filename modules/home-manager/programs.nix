@@ -1,5 +1,19 @@
-{ ... }:
 {
+  pkgs,
+  ...
+}:
+{
+
+  # packages installed for the user
+  home.packages = with pkgs; [
+    grc
+    nitch
+    nixfmt-rfc-style
+    nh
+    nom
+    nvd
+  ];
+
   programs = {
     tealdeer = {
       enable = true;

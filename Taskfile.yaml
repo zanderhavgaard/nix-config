@@ -30,3 +30,8 @@ tasks:
   build:
     cmds:
       - sudo nixos-rebuild build --flake .
+
+  home-switch:
+    desc: "Apply home-manager configuration for current hostname"
+    cmds:
+      - nix run home-manager/release-24.11 -- switch --flake .#$(hostname)

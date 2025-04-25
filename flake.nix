@@ -57,28 +57,28 @@
             }
           ];
         };
-        phobos = nixpkgs.lib.nixosSystem rec {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-          };
-          modules = [
-            ./hosts/phobos/configuration.nix
-            nixos-hardware.nixosModules.lenovo-thinkpad-x250
-
-            # setup home-manager as a module
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.zander = import ./hosts/phobos/home.nix;
-            }
-          ];
-        };
+        # phobos = nixpkgs.lib.nixosSystem rec {
+        #   system = "x86_64-linux";
+        #   specialArgs = {
+        #     inherit inputs;
+        #     pkgs-unstable = import nixpkgs-unstable {
+        #       inherit system;
+        #       config.allowUnfree = true;
+        #     };
+        #   };
+        #   modules = [
+        #     ./hosts/phobos/configuration.nix
+        #     nixos-hardware.nixosModules.lenovo-thinkpad-x250
+        #
+        #     # setup home-manager as a module
+        #     home-manager.nixosModules.home-manager
+        #     {
+        #       home-manager.useGlobalPkgs = true;
+        #       home-manager.useUserPackages = true;
+        #       home-manager.users.zander = import ./hosts/phobos/home.nix;
+        #     }
+        #   ];
+        # };
         gemini = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
@@ -189,6 +189,27 @@
             }
           ];
         };
+    };
+
+    homeConfigurations = {
+      phobos = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+
+        extraSpecialArgs = {
+          inherit inputs;
+          pkgs-unstable = import nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+        };
+
+        modules = [
+          ./hosts/phobos/home.nix
+        ];
+      };
       };
     };
 }

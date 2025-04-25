@@ -24,6 +24,7 @@ in
     ../../modules/home-manager/k9s.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/zathura.nix
+    ../../modules/home-manager/arch-overrides.nix
   ];
 
   # Configure the user
