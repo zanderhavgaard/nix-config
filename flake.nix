@@ -35,6 +35,34 @@
     }:
     {
       nixosConfigurations = {
+        nostromo = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+          modules = [
+            ./hosts/nostromo/configuration.nix
+            nixos-hardware.nixosModules.common-cpu-amd
+            nixos-hardware.nixosModules.common-cpu-amd-pstate
+	    # fails to build for some reason ...
+            # nixos-hardware.nixosModules.common-cpu-amd-zenpower
+            nixos-hardware.nixosModules.common-gpu-amd
+            nixos-hardware.nixosModules.common-pc
+            nixos-hardware.nixosModules.common-pc-ssd
+
+            # setup home-manager as a module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zander = import ./hosts/nostromo/home.nix;
+            }
+          ];
+        };
         orion = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
