@@ -117,6 +117,7 @@ in
     grc
     nitch
     btop
+    amdgpu_top
     iftop
     tcpdump
     prettyping
