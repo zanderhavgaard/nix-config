@@ -14,7 +14,7 @@
     docker.enable = true;
 
     # install waydroid
-    waydroid.enable = true;
+    waydroid.enable = false;
   };
 
   services = {
