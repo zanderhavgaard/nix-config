@@ -221,8 +221,8 @@ in
       riverctl map normal Super+Shift+Control U spawn "riverctl keyboard-layout us"
       riverctl map normal Super+Shift+Control D spawn "riverctl keyboard-layout dk"
       # for laptop, rebind some keys to be more HHKB-esque
-      # riverctl map normal Super+Shift+Control Y spawn "riverctl keyboard-layout -options \"altwin:swap_lalt_lwin\" us-hhkb-esque"
-      riverctl map normal Super+Shift+Control Y spawn "riverctl keyboard-layout -options \"altwin:swap_lalt_lwin\" -variant laptop us"
+      riverctl map normal Super+Shift+Control Y spawn "riverctl keyboard-layout -options \"altwin:swap_lalt_lwin\" us-hhkb-esque"
+      # riverctl map normal Super+Shift+Control Y spawn "riverctl keyboard-layout -options \"altwin:swap_lalt_lwin\" -variant laptop us"
 
       # Super+0 to focus all tags
       # Super+Shift+0 to tag focused view with all tags
