@@ -153,6 +153,7 @@ in
     pipe-viewer
     ytfzf
 
+    postgresql_17
     openvpn
 
     wl-clipboard
