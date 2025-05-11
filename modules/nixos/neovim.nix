@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  pkgs-unstable,
   ...
 }:
 {
@@ -11,6 +12,7 @@
 
       # TODO: seems to be bugged right now
       # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+      package = pkgs-unstable.neovim-unwrapped;
 
       # enable providers for plugins in other languages than lua
       withPython3 = true;
