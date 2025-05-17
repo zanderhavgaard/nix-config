@@ -20,6 +20,11 @@
           "appindicatorsupport@rgcjonas.gmail.com"
         ];
       };
+
+      # Enable "Super + Right Click = Resize" window behavior
+      "org/gnome/desktop/wm/preferences" = {
+        resize-with-right-button = true;
+      };
     };
   };
 }
