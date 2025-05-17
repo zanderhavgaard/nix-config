@@ -21,6 +21,11 @@
         ];
       };
 
+      "org/gnome/shell/extensions/dash-to-panel" = {
+        multi-monitor = true;
+        panel-position = "TOP";
+      };
+
       # Enable "Super + Right Click = Resize" window behavior
       "org/gnome/desktop/wm/preferences" = {
         resize-with-right-button = true;
