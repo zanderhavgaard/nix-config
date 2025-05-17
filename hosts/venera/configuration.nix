@@ -33,21 +33,14 @@
     ../../modules/nixos/steam.nix
   ];
 
+  # critical: let the nvidia DRM driver own the console
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia-drm.fbdev=1"
+  ];
+
   # overrride default to use latest kernel, and use standard/lts
   boot.kernelPackages = lib.mkForce pkgs.linuxPackages;
-
-  # create bootable configruration with only dedicated nvidia graphics enabled
-  # specialisation = {
-  #   gaming-time.configuration = {
-  #     hardware.nvidia = {
-  #       prime.sync.enable = lib.mkForce true;
-  #       prime.offload = {
-  #         enable = lib.mkForce false;
-  #         enableOffloadCmd = lib.mkForce false;
-  #       };
-  #     };
-  #   };
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
