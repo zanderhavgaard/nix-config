@@ -1,5 +1,7 @@
 # sometimes its conveient to be able to fall back on plasma when things dont work
-{ ... }:
+{
+  ...
+}:
 {
   services = {
 
@@ -8,36 +10,25 @@
     };
 
     displayManager = {
+      # sddm seems to be bugged currently ...
       sddm = {
-        enable = true;
-
-        wayland = {
-          enable = true;
-        };
+        enable = false;
+        wayland.enable = false;
       };
     };
 
     desktopManager = {
       plasma6 = {
         enable = true;
-        enableQt5Integration = false;
       };
     };
 
   };
 
-  # FIXME: for some reason plasma crashes instantly when starting under wayland
-  # services.xserver.enable = true;
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # services.displayManager.defaultSession = "plasma";
-  #
-  # services.displayManager.sddm.wayland.enable = true;
-
-  # qt = {
-  #   enable = true;
-  #   platformTheme = "gnome";
-  #   style = "adwaita-dark";
-  # };
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
 }
