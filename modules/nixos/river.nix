@@ -49,7 +49,7 @@
     wl-clipboard
     libnotify
     wlr-randr
-    pavucontrol
+    pwvucontrol
     pamixer
     playerctl
     brightnessctl
