@@ -33,5 +33,6 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
+    zenity # Steam’s dialogs under Wayland
   ];
 }

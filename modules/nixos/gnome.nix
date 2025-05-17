@@ -17,6 +17,5 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
-    zenity # Steam’s dialogs under Wayland
   ];
 }
