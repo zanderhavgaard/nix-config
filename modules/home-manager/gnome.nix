@@ -25,6 +25,7 @@
       "org/gnome/shell/extensions/dash-to-panel" = {
         multi-monitor = true;
         panel-position = "TOP";
+        panel-size = 30;
       };
 
       # Enable "Super + Right Click = Resize" window behavior
