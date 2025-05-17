@@ -18,6 +18,7 @@
         # Enable AppIndicator/KStatusNotifierItem extension by its UUID
         enabled-extensions = [
           "appindicatorsupport@rgcjonas.gmail.com"
+          "dash-to-panel@jderose9.github.com"
         ];
       };
 
