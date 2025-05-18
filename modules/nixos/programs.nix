@@ -95,6 +95,7 @@ in
     nextcloud-client
     emacs
     ispell
+    drawio
 
     # cli programs
     helix
@@ -116,6 +117,7 @@ in
     go-task
     grc
     nitch
+    openssl
     btop
     amdgpu_top
     iftop
