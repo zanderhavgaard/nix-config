@@ -96,6 +96,7 @@ in
     emacs
     ispell
     drawio
+    filezilla
 
     # cli programs
     helix
