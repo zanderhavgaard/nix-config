@@ -3,15 +3,15 @@
 
   inputs = {
     # setup stable nixpkgs
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # setup stable nixpkgs
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-25.05";
 
     # setup home-manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       # url = "github:nix-community/home-manager"; # unstable
       # make home-manager use the same nixpkgs as the flake
       inputs.nixpkgs.follows = "nixpkgs";

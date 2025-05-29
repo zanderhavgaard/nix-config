@@ -32,7 +32,7 @@ in
   home.homeDirectory = homePath;
 
   # define the nixpkgs version to use
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   # let home-manager install and mange itself
   programs.home-manager.enable = true;
