@@ -152,6 +152,7 @@ in
     yt-dlp
     termscp
     termusic
+    fooyin
     ueberzugpp
     pipe-viewer
     ytfzf
