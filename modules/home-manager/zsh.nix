@@ -28,7 +28,7 @@
   programs.zsh = {
     enable = true;
 
-    initExtra = ''
+    initContent = ''
       autoload -U edit-command-line
 
       # use pspg
