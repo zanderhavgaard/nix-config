@@ -93,7 +93,6 @@ in
     zathura
     sioyek
     nextcloud-client
-    emacs
     ispell
     drawio
     filezilla
