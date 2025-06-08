@@ -16,19 +16,8 @@
   };
 
   programs.yazi = {
+    enable = true;
     enableFishIntegration = true;
-    # shellWrapperName = "yy"; # this doesn't seem to work
-
-    # these don't seem to work either
-    settings = {
-      manager = {
-        show_hidden = true;
-      };
-      preview = {
-        max_width = 1000;
-        max_height = 1000;
-      };
-    };
   };
 
   programs.starship = {
@@ -42,16 +31,6 @@
 
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
-
-      # add wrapper function for launching yazi
-      function yy
-      	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-      	yazi $argv --cwd-file="$tmp"
-      	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-      		builtin cd -- "$cwd"
-      	end
-      	rm -f -- "$tmp"
-      end
 
       # setup ssh-agent and add keys, supress output
       eval (ssh-agent -c) &> /dev/null

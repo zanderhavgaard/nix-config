@@ -15,6 +15,7 @@ in
     ../../modules/home-manager/fuzzel.nix
     ../../modules/home-manager/wezterm.nix
     ../../modules/home-manager/ghostty.nix
+    ../../modules/home-manager/yazi.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/foot.nix

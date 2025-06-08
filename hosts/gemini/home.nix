@@ -17,6 +17,7 @@ in
     ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/foot.nix
+    ../../modules/home-manager/yazi.nix
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
