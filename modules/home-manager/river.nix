@@ -163,14 +163,13 @@ in
 
       # start background processes
       spawn = [
-        "\"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river\""
         "\"swayidle -w timeout 600 'swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'\"" # lock screen
         "nm-applet" # network manager applet
         "mako" # notification daemon
         "\"swww-daemon --format xrgb\"" # walpaper daemon
         # propagate environment variables to user session
-        "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE"
-        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE"
+        "\"systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP\""
+        "\"dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP\""
       ];
     };
 
@@ -215,7 +214,10 @@ in
       # ===== keymaps =====
 
       # take a screenshot with grim, use slurp to select the geometry
-      riverctl map normal Super+Shift+Control S spawn "wayshot --slurp \"\$(slurp)\" --stdout | wl-copy"
+      # riverctl map normal Super+Shift+Control S spawn "wayshot --slurp \"\$(slurp)\" --stdout | wl-copy"
+      riverctl map normal Super+Shift+Control S spawn "flameshot gui"
+      # flameshot should always float
+      riverctl rule-add -app-id "flameshot" float
 
       # switch keyboard layouts
       riverctl map normal Super+Shift+Control U spawn "riverctl keyboard-layout us"

@@ -155,6 +155,7 @@ in
     ueberzugpp
     pipe-viewer
     ytfzf
+    flameshot
 
     postgresql_17
     openvpn
