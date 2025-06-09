@@ -90,7 +90,6 @@ in
     qutebrowser
     chromium
     mpv
-    zathura
     sioyek
     nextcloud-client
     ispell
