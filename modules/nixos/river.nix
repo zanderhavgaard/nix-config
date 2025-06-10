@@ -16,7 +16,7 @@
     };
   };
 
-  # some variables needed for riverwm/wayland to work xdg-portal and some applications
+  # some variables needed for riverwm/wayland to work with xdg-portal and some applications
   environment.sessionVariables = {
     MOZ_ENABLE_WAYLAND = "1";
     _JAVA_AWT_WM_NONREPARENTING = 1;
@@ -28,7 +28,6 @@
     # and not wl-roots, for example flameshot ...
     XDG_CURRENT_DESKTOP = "sway";
     XDG_SESSION_DESKTOP = "sway";
-
   };
 
   # it's convenient to have a display manager as well
