@@ -155,6 +155,7 @@ in
     pipe-viewer
     ytfzf
     flameshot
+    parted
 
     postgresql_17
     openvpn
