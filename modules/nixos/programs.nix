@@ -156,6 +156,7 @@ in
     ytfzf
     flameshot
     parted
+    imv
 
     postgresql_17
     openvpn
