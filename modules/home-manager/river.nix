@@ -92,9 +92,9 @@ in
 
             # wideriver
             up = "send-layout-cmd wideriver \"--layout monocle\"";
-            down = "send-layout-cmd wideriver \"--layout wide --stack diminish --count 1 --ratio 0.5\"";
-            left = "send-layout-cmd wideriver \"--layout left\"";
-            right = "send-layout-cmd wideriver \"--layout right\"";
+            down = "send-layout-cmd wideriver \"--layout wide --stack diminish --count 1 --ratio 0.4\"";
+            left = "send-layout-cmd wideriver \"--layout left --stack diminish --count 1 --ratio 0.5\"";
+            right = "send-layout-cmd wideriver \"--layout right --stack diminish --count 1 --ratio 0.5\"";
 
             Space = "send-layout-cmd wideriver \"--layout-toggle\"";
 
@@ -114,12 +114,16 @@ in
             Comma = "send-to-output -current-tags previous";
           };
 
-          # cycle wallpaper with swww
-          # "Super+Control+Shift space" = "spawn \"swww img $(ls ${wallpaper_path} | shuf -n 1)\"";
-          "Super+Control+Shift space" = "spawn \"${wallpaper_script_path}/bin/${wallpaper_script_name}\"";
+          "Super+Shift+Control" = {
+            plus = "send-layout-cmd wideriver \"--count +1\"";
+            minus = "send-layout-cmd wideriver \"--count -1\"";
 
-          # lock the screen with swaylock
-          "Super+Shift+Control L" = "spawn \"swaylock --color 000000\"";
+            # cycle wallpaper with swww
+            space = "spawn \"${wallpaper_script_path}/bin/${wallpaper_script_name}\"";
+
+            # lock the screen with swaylock
+            L = "spawn \"swaylock --color 000000\"";
+          };
 
           # Super+Shift+E to exit river
           "Super+Shift+Control+Alt Q" = "exit";
@@ -260,13 +264,13 @@ in
         --count-master 1 \
         --ratio-master 0.50 \
         --count-wide-left 0 \
-        --ratio-wide 0.5 \
+        --ratio-wide 0.50 \
         --smart-gaps \
-        --inner-gaps 5 \
-        --outer-gaps 5 \
+        --inner-gaps 0 \
+        --outer-gaps 0 \
         --border-width 1 \
-        --border-width-monocle 0 \
-        --border-width-smart-gaps 0 \
+        --border-width-monocle 1 \
+        --border-width-smart-gaps 1 \
         --border-color-focused "0x61afef" \
         --border-color-focused-monocle "0x5c6370" \
         --border-color-unfocused "0x5c6370" \
