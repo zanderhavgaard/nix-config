@@ -99,7 +99,7 @@ in
             Space = "send-layout-cmd wideriver \"--layout-toggle\"";
 
             plus = "send-layout-cmd wideriver \"--ratio +0.025\"";
-            equal = "send-layout-cmd wideriver \"--ratio 0.35\"";
+            equal = "send-layout-cmd wideriver \"--ratio 0.50\"";
             minus = "send-layout-cmd wideriver \"--ratio -0.025\"";
           };
 
