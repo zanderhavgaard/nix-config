@@ -6,12 +6,8 @@ let
 in
 {
   imports = [
-    # window manager and bar
-    # ../../modules/home-manager/waybar.nix
-    # ../../modules/home-manager/river.nix
-    # common programs
     ../../modules/home-manager/programs.nix
-    # config for specigic programs
+    ../../modules/home-manager/default-apps.nix
     ../../modules/home-manager/fuzzel.nix
     ../../modules/home-manager/wezterm.nix
     ../../modules/home-manager/ghostty.nix
