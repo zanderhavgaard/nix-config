@@ -178,5 +178,6 @@ in
     kubectx
     # kubeswitch
     talosctl
+    cilium-cli
   ];
 }
