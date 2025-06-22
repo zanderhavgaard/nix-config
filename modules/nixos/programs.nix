@@ -177,5 +177,6 @@ in
     k9s
     kubectx
     # kubeswitch
+    talosctl
   ];
 }
