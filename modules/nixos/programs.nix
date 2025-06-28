@@ -133,7 +133,6 @@ in
     eza
     bat
     devbox
-    devenv
     nix-output-monitor
     gh
     hub
