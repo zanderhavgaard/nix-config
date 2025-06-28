@@ -178,5 +178,6 @@ in
     # kubeswitch
     talosctl
     cilium-cli
+    kubeseal
   ];
 }
