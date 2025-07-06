@@ -95,6 +95,7 @@ in
     ispell
     drawio
     filezilla
+    zed-editor
 
     # cli programs
     helix
