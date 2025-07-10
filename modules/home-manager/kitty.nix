@@ -15,9 +15,7 @@
       name = "MartianMono Nerd Font";
       size = 10;
     };
-    themeFile = "OneDark-Pro";
-    # themeFile = "Dracula";
-    # themeFile = "Doom_One";
+    themeFile = "onehalf-dark";
 
     settings = {
       background_opacity = 0.9;
