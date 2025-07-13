@@ -28,6 +28,7 @@
     ../../modules/nixos/user.nix
     ../../modules/nixos/neovim.nix
     ./zfs.nix
+    ./nfs.nix
   ];
 
   # overrride default to use latest kernel, and use standard/lts
