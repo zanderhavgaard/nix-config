@@ -15,7 +15,7 @@
       name = "MartianMono Nerd Font";
       size = 10;
     };
-    themeFile = "onehalf-dark";
+    themeFile = "OneHalfDark";
 
     settings = {
       background_opacity = 0.9;
