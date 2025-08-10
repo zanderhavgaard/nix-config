@@ -32,6 +32,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    gamescope
     mangohud
     zenity # Steam’s dialogs under Wayland
   ];
