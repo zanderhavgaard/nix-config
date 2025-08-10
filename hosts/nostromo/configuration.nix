@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
+  lib,
   ...
 }:
 
@@ -30,6 +31,9 @@
     ../../modules/nixos/bottles.nix
     ../../modules/nixos/steam.nix
   ];
+
+  # override to disable ssh-agent, as this conflicts with some setting in gnome on nixos-unstable
+  programs.ssh.startAgent = lib.mkForce false;
 
   # mount extra disk to /data
   fileSystems."/data" = {
