@@ -1,4 +1,6 @@
-{ ... }:
+{
+  ...
+}:
 
 let
   username = "zander";
@@ -21,7 +23,6 @@ in
     ../../modules/home-manager/k9s.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/sioyek.nix
-    ../../modules/home-manager/gnome.nix
   ];
 
   # Configure the user

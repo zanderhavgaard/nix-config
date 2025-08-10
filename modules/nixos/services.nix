@@ -35,8 +35,7 @@
     openssh.enable = false;
 
     # power profile daemon
-    # TODO: configure
-    power-profiles-daemon.enable = false;
+    power-profiles-daemon.enable = true;
 
     # start keyring
     gnome.gnome-keyring.enable = true;
