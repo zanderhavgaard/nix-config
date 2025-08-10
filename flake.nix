@@ -4,9 +4,7 @@
   inputs = {
     # setup stable nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    # setup stable nixpkgs
+    # setup unstable nixpkgs
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # setup home-manager
@@ -15,6 +13,12 @@
       # url = "github:nix-community/home-manager"; # unstable
       # make home-manager use the same nixpkgs as the flake
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # setup unstable home-manager
+    home-manager-unstable = {
+      url = "github:nix-community/home-manager";
+      # make home-manager use the same nixpkgs as the flake
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     # community hardware configurations
@@ -26,20 +30,14 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      home-manager-unstable,
       nixos-hardware,
       ...
     }:
     {
       nixosConfigurations = {
-        nostromo = nixpkgs.lib.nixosSystem rec {
+        nostromo = nixpkgs-unstable.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-          };
           modules = [
             ./hosts/nostromo/configuration.nix
             nixos-hardware.nixosModules.common-cpu-amd
@@ -50,7 +48,7 @@
             nixos-hardware.nixosModules.common-pc-ssd
 
             # setup home-manager as a module
-            home-manager.nixosModules.home-manager
+            home-manager-unstable.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
