@@ -7,7 +7,7 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # setup stable nixpkgs
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # setup home-manager
     home-manager = {
