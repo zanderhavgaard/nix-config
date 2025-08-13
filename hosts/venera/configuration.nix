@@ -25,12 +25,10 @@
     ../../modules/nixos/services.nix
     ../../modules/nixos/audio.nix
     ../../modules/nixos/fonts.nix
-    # ../../modules/nixos/river.nix
-    # ../../modules/nixos/plasma.nix
-    ../../modules/nixos/gnome.nix
     ../../modules/nixos/neovim.nix
     ../../modules/nixos/bottles.nix
     ../../modules/nixos/steam.nix
+    ../../modules/nixos/cosmic.nix
   ];
 
   # critical: let the nvidia DRM driver own the console
