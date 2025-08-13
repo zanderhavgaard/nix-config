@@ -36,7 +36,7 @@
     }:
     {
       nixosConfigurations = {
-        nostromo = nixpkgs-unstable.lib.nixosSystem rec {
+        nostromo = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           modules = [
             ./hosts/nostromo/configuration.nix
@@ -48,7 +48,7 @@
             nixos-hardware.nixosModules.common-pc-ssd
 
             # setup home-manager as a module
-            home-manager-unstable.nixosModules.home-manager
+            home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
