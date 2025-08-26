@@ -19,7 +19,7 @@ in
     ../../modules/home-manager/fish.nix
     ../../modules/home-manager/zsh.nix
     ../../modules/home-manager/git.nix
-    ../../modules/home-manager/theme.nix
+    # ../../modules/home-manager/theme.nix
     ../../modules/home-manager/k9s.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/sioyek.nix
