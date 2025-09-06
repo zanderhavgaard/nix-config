@@ -43,6 +43,7 @@ in
     chromium.enable = true;
     # ladybird.enable = true;
 
+    seahorse.enable = true; # gnome keyring manager
     gnome-disks.enable = true;
     thunderbird.enable = true;
     foot.enable = true;
@@ -73,6 +74,7 @@ in
     glib
     libnotify
     pciutils
+    libsecret
 
     # graphical applications
     ## Example how to add package from stable nixpkgs
