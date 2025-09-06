@@ -38,5 +38,5 @@
 
   # 3) Ensure portals aren’t missing (some apps poke via portals)
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-cosmic ];
 }
