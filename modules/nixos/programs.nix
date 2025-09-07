@@ -76,6 +76,11 @@ in
     pciutils
     libsecret
 
+    # keyboard stuff
+    qmk
+    via
+    vial
+
     # graphical applications
     ## Example how to add package from stable nixpkgs
     # pkgs-unstable.ghostty
