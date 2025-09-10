@@ -103,6 +103,10 @@ in
     drawio
     filezilla
     zed-editor
+    # you might need to run element-desktop from cli with this argument to get it
+    # to play nice with gnome-keyring, should only need to do it once.
+    # 'element-desktop --password-store=gnome-libsecret'
+    element-desktop
 
     # cli programs
     helix
